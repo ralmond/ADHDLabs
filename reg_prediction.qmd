@@ -1,0 +1,68 @@
+### Predicting Future Observations
+
+<!-- Removed this from L3 to reduce workload. Idea is to polish this body of text into it's own optional section. -->
+
+The last part of the lab requires you to assess how well the model
+predicts the general anxiety scores from the hyperactive impulse scores.
+To do this, you will need to save predicted values in the regression
+dialog. There are several different varieties of predicted values, but
+the best one for our purposes is the "Adjusted" predictions. These refit
+the model without each value in turn and then use that model to predict
+the data point that was left out. For example, the prediction for *617*
+is made using all of the data points except *617* in fitting the
+regression line.
+
+One of the fundamental rules of statistics is that we should always be
+honest about how much we know and how much we don't know. Thus, along
+with our prediction, we should say something about the accuracy of our
+prediction. Statisticians usually do this by producing an interval
+estimate. They pick a probability (usually 95%) and produce an interval
+that should contain the actual value with that probability.[^4]
+
+SPSS will calculate both the predicted value and a prediction interval;
+however, it offers a choice of two different prediction intervals. This
+is because there are two sources of prediction errors. Suppose we were
+interested in the mean anxiety score for students who scored exactly 12
+on the hyperactivity impulse scale. Our prediction would be the point on
+the regression line corresponding to *X* = 12. However, there is some
+sampling error in the slope and the intercept, so we have a confidence
+interval around where the point should be. This is the "mean" type
+prediction interval produced by SPSS.
+
+If we are interested in a particular student with that score, then we
+also need to consider the fact that most data points don't lie exactly
+on the line. The residual variance gives us the amount of additional
+error we need to add to our intervals. The "individual" style intervals
+in SPSS add this extra variance. These are the ones that we want.
+
+<!-- ![](media/image1.png){width="4.697916666666667in" height="7.166666666666667in"} -->
+
+*Figure 1. SPSS Regression Save... dialog with best choices for this
+lab.*
+
+If you set up the "Save..." dialog in SPSS on our regression as shown in
+Figure 1, you should get the following four new variables in your data
+view:
+
+-   PRE\_1 -- this is the exact value (on the transformed scale if you
+    transformed the outcome) predicted by the line.
+
+-   RES\_1 -- this is the residual (difference from the predicted value)
+    for each school.
+
+-   LCI\_1 -- lower prediction (confidence) interval for each state.
+    This is the lower bound on our uncertainty about the prediction.
+
+-   UCI\_1 -- upper prediction (confidence) interval for each state.
+    This is the upper bound on our uncertainty about the prediction.
+
+Each time you run the regression using the "Save..." option, you will
+get a new set of residuals and predicted values. SPSS will increment the
+number so "\_1" is from the first regression model, "\_2" is from the
+second and so on. You probably will want to name the saved variables
+IMMEDIATELY after you run each model, or soon you will forget what all
+of the saved items are!! Once you have done that, getting the prediction
+for a particular student is simple. Just scroll down in the data until
+you get to that student\'s row and look across for the PRE\_k (or
+ADJ\_k) column (point prediction) and LCI\_k and UCI\_k columns (lower
+and upper bounds for confidence interval).

@@ -1,0 +1,7 @@
+# Equations and Abbreviations
+
+<!-- List the abbreviations we're using and equations -->
+
+* z-score 
+* cohen's d
+* mean

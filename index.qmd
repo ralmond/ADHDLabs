@@ -1,0 +1,29 @@
+# Preface {.unnumbered}
+
+## Introduction to the Labs
+
+In the course of four labs, you (working in groups of up to 3 people) are going to write a short paper addressing a question about attention deficit hyperactivity disorder (ADHD) and anxiety. This will use data collected by Prevat, Dehili, Taylor and Marshal (2015) and will replicate some of their results.
+
+To make this task somewhat more manageable, we will split writing the paper into four parts:
+
+1.  Getting the data into SPSS (or R) and writing descriptions of the data and measures.
+
+2.  Doing simple summaries, both numerical and graphical of the data.
+
+3.  Looking at relationship between anxiety and ADHD symptoms using regression.
+
+4.  Looking at the difference between students referred for ADHD and randomly selected students using a $t$-test.
+
+After each part, you will submit a draft paper, on which we will give you feedback. You will earn participation points only for the drafts. At the end of the course, at least one member of your group will submit a final report. This is the part that will be scored. The Final paper is worth 1/4 of the total grade in the course (weighted equally with both midterm and final).
+
+## Grading on Style
+
+There are several important goals in having you write the paper. First, in many of your future careers, you will need to write summaries of research. So we are going to get you used to writing in academic style. Some of the issue here is that there is a need for more precision in academic writing than in casual speech. For example, if I said to you "*Dinotopia* is a book about dinosaurs in the library," I could clue you in with my vocal accents whether it was a book about *dinosaurs in the library* or a *book in the library* about dinosaurs (it could be both, *Dinotopia* does have a scene with dinosaurs in a library).
+
+Some of the rules of academic language are common to general good writing. There should be one paragraph per topic, and each paragraph should have a topic sentence. Others are related to the need for precision; if you write "We fit the model to the data," is it clear which model was fit to which data set? Finally, there are technical terms that need to be used in the correct way. For example, "significance" has a very technical meaning in statistics, so using if for it lay meaning of "large and important" implies thing about the support of the data for the claim which you might not mean.
+
+Writing about data will also help you gain greater depth in your statistical vocabulary. By writing about the data, you learn about what is important to look for when reading other peoples statistics. You will also learn more about how to use the terms. It also helps the teaching staff identify points of confusion you might still have about the some of the statistical terms.
+
+In addition to the rules for text, there are rules for figures (plots and graphs) and tables. Each should be given a caption which tells something about it. The rows and columns of the table and the axis of the graph should be human readable names and not the abbreviations often used for variable names in stat packages. You should use the right number of significant digits: too many or two few obscures the relationships you are trying to describe.
+
+The grading for the final report will be split with 60% for doing the correct analysis and 40% for having good academic style. I am somewhat flexible here, I don't insist on exact APA style, but it should be close enough (in particular, if your discipline uses a different style, that is fine). But it is important that everything is clear.
