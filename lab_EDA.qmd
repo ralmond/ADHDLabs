@@ -2,13 +2,8 @@
 title: "Lab Two Exploratory Data Analysis"
 author: "Russell Almond"
 date: "5/22/2022"
-output:
-  html_document: default
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 # A Recap of Part 1
 

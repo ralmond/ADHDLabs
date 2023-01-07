@@ -1,4 +1,8 @@
-# Lab Three: Regression
+---
+title: "EDF 5400 ADHD Labs:  Part 4: Regression "
+---
+
+# Lab Four: Regression
 
 At the end of this lab you should be able to perform a simple linear regression, including diagnostics and making predictions. The question we're exploring in this lab is:
 

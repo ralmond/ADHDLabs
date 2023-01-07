@@ -1,0 +1,8 @@
+---
+title: "EDF 5400 ADHD Labs:  Part 1:  Data Entry and Cleaning "
+---
+
+
+# Lab One: Data Entry
+
+<!-- Upload downloadable copy of existing lab document as placeholder. -->

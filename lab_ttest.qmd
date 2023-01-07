@@ -1,4 +1,8 @@
-# Lab Four: *t-*test
+---
+title: "EDF 5400 ADHD Labs:  Part 3:  Comparing Means"
+---
+
+# Lab Three *t-*test
 
 @prevatt15 were interested in investigating students with attention deficit hyperactivity disorder (ADHD) so that they could teach them strategies to compensate for their difficulties. As sitting for an examination requires sitting quietly for long periods of time (something that persons with ADHD typically have difficulty doing), it would seem to follow that *students with ADHD might be more anxious about tests than students without ADHD* [^adhd].
 

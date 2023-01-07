@@ -1,0 +1,42 @@
+project:
+  type: website
+
+website:
+  title: "EDF 5400 ADHD Lab instructions and Rubrics"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: lab_dataEntry.qmd
+        text: Part 1: Data Cleaning
+      - href: lab_EDA.qmd
+        text: Part 2:  EDA
+      - href: lab_ttest.qmd
+        text: Part 3: t-test
+      - href: lab_regression.qmd
+        text: Part 4: Regression
+      - href: lab_final_report.qmd
+        text: Final Report
+      - href: data_library.qmd
+        text: Data
+      - href: equ_abrev.qmd
+        text: Notation
+      - href: style.qmd
+        text: Style Guide
+      - href: SPSS_commands.qmd
+        text: SPSS Command Reference
+      - href: reg_prediction.qmd
+        text: Prediction (Extra)
+      
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
+bibliography:  references.bib
+csl:  apa.csl
+

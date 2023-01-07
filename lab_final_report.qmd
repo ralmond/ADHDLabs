@@ -1,4 +1,8 @@
-# Lab Three Report
+---
+title: "EDF 5400 ADHD Labs:  Final Report
+---
+
+# Final Report
 
 Pretend that you are analyzing these results and submitting them as a
 paper to a journal. You will need to follow general APA style. Your
