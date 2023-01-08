@@ -2,4 +2,13 @@
 title: "5400 Lab Style Guide"
 ---
 
+* Russell Almond's Style Guide:
+[Elements of Style in Data Analysis](data/ElementStyleDataAnalysis.docx)
+
+* Betsy Becker's Writing Hints:
+[Writing Hints](data/Writing hints1.docx)
+
+* An APA document format template (by various 5400 TAs)
+[APA Template](data/APA_Format_template.docx)
+
 
