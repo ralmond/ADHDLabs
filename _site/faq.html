@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>EDF 5400 ADHD Lab instructions and Rubrics – faq</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./img/fsu-seal-3d-1.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_dataEntry.html">
+ <span class="menu-text">Part 1: Data Cleaning</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_EDA.html">
+ <span class="menu-text">Part 2: EDA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_ttest.html">
+ <span class="menu-text">Part 3: t-test</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_regression.html">
+ <span class="menu-text">Part 4: Regression</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_final_report.html">
+ <span class="menu-text">Final Report</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data_library.html">
+ <span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./equ_abrev.html">
+ <span class="menu-text">Notation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./style.html">
+ <span class="menu-text">Style Guide</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./SPSS_commands.html">
+ <span class="menu-text">SPSS Command Reference</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./faq.html" aria-current="page">
+ <span class="menu-text">F.A.Q.</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./reg_prediction.html">
+ <span class="menu-text">Prediction (Extra)</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#frequently-asked-questions-by-lab" id="toc-frequently-asked-questions-by-lab" class="nav-link active" data-scroll-target="#frequently-asked-questions-by-lab">Frequently Asked Questions (by lab)</a>
+  <ul class="collapse">
+  <li><a href="#lab-one" id="toc-lab-one" class="nav-link" data-scroll-target="#lab-one">Lab One</a></li>
+  <li><a href="#lab-two" id="toc-lab-two" class="nav-link" data-scroll-target="#lab-two">Lab Two</a></li>
+  <li><a href="#lab-three" id="toc-lab-three" class="nav-link" data-scroll-target="#lab-three">Lab Three</a></li>
+  <li><a href="#lab-four" id="toc-lab-four" class="nav-link" data-scroll-target="#lab-four">Lab Four</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<pre><code>title: "EDF 5400 Labs:  Frequently Asked Questions"</code></pre>
+<section id="frequently-asked-questions-by-lab" class="level1">
+<h1>Frequently Asked Questions (by lab)</h1>
+<section id="lab-one" class="level2">
+<h2 class="anchored" data-anchor-id="lab-one">Lab One</h2>
+</section>
+<section id="lab-two" class="level2">
+<h2 class="anchored" data-anchor-id="lab-two">Lab Two</h2>
+</section>
+<section id="lab-three" class="level2">
+<h2 class="anchored" data-anchor-id="lab-three">Lab Three</h2>
+<ol type="1">
+<li><p><em>Use variable labels.</em> If you add text labels to your variables as you create them (you can do this in the transformation dialog) the plots and table will come out with more human readable labels.</p></li>
+<li><p><em>Do I need both histograms and boxplots?</em> The best way to answer this question is to think of your lab report as telling a story. Do the histograms and boxplots tell different stories? If yes, include them both (and explain in the text the interesting observations in both). If no, pick the one that tells the story the best and include only that one.</p></li>
+<li><p><em>Is XXX an outlier I should worry about?</em> Not every point that shows up on the extreme ends of the scatterplot is an outlier. The boxplot has a built-in test for outliers, so that is a good tool for double checking whether something you noted in the scatterplot is an outlier or not. If you suspect outliers, another test you can make is to rerun the regression excluding the potential outliers. To do this, use the command <u>D</u>ata &gt; <u>S</u>elect Cases… [ALT+D&nbsp;S] and select the “If…” option and write an expression that will exclude the outliers, e.g., “hyper &lt; 35”. Then run the regression or correlation command again.</p></li>
+</ol>
+<p>The slope and correlation should change a little bit, but not a lot. If they do change a lot, then the outlier is worth mentioning. If they don’t you could give it a passing mention (e.g., “XXX thought to be an outlier, but rerunning the regression with XXX excluded produced only a small change in the correlation and slope.”), but not more. However, if the results change markedly, report both numbers (unless you have a substantial reason for thinking the outlier doesn't belong in the population). It is fairly common for students to go outlier crazy at this point in time, don’t fall into that trap.</p>
+<p><em>Here are some web sites that cover SPSS and regression that you may find helpful:</em></p>
+<p><a href="http://www.ats.ucla.edu/stat/spss/seminars/SPSSGraphics/spssgraph.htm"><u>http://www.ats.ucla.edu/stat/spss/seminars/SPSSGraphics/spssgraph.htm</u></a></p>
+<p><a href="http://core.ecu.edu/psyc/wuenschk/spss/corrregr-spss.doc"><u>http://core.ecu.edu/psyc/wuenschk/spss/corrregr-spss.doc</u></a></p>
+</section>
+<section id="lab-four" class="level2">
+<h2 class="anchored" data-anchor-id="lab-four">Lab Four</h2>
+<p><em>SPSS gave me a significance of .000, what should I do for the</em> p<em>-value?</em></p>
+<p>Put down <em>p&lt;.001</em> (SPSS automatically rounds the <em>p-</em>value to three digits, and so it must be smaller than that, but it is not impossible, so the value is not zero).</p>
+<p><em>How do I pick which line of the t-test results to use?</em></p>
+<p>SPSS provides more information here than you need to report. First, look at Levene’s test (the first couple of columns which appear only in the first row). Is it reasonable to assume that the variances are equal? If so, use the first line of the table. If not, use the second line of the table. Generally you do not need to report Levene’s test, unless you decided to use the unequal variance procedure because of it.</p>
+<p>Another viable strategy is to ignore Levene’s test, and always use the second row. If the variances are approximately equal both rows are about the same. If the variances are different, then the second row is the one to use anyway.</p>
+<p><em>Why doesn’t SPSS supply an effect size?</em></p>
+<p>I don’t know, but if you wait for IBM to supply one, you won’t get the lab in on time. Haiyan Wu (with some cleanup by Zhongtian Liang) put together an Excel spreadsheet which has the formula in it. This is available at <a href="http://pluto.coe.fsu.edu/effectSize_d.xls"><u>http://pluto.coe.fsu.edu/effectSize_d.xls</u></a>.</p>
+<p><em>If I fix every single thing the TAs mark on my draft lab, will I get a perfect score on the final?</em></p>
+<p>No.&nbsp;Often other mistakes become apparent once the first mistakes are fixed. Sometimes we will miss things on the first round and pick them up on the second. This is life in the research world and the same thing often happens with research papers and grant proposals. Get used to it.</p>
+<p><em>How come I got a different result from the one in Prevatt et al. (2015)?</em></p>
+<p>Dr.&nbsp;Prevatt did the analysis for that paper a year or two before she shared the data with us (it just takes that long to go through the review processes). Therefore, do not expect the number you get to be exactly the same as those found by Prevatt et al.&nbsp;(2015).</p>
+<p><em>Have I done all of the required tests?</em></p>
+<p>You should have both a one-sample confidence interval and independent (2-sample) <em>t</em>-test. Every time you do a test you need to report the <em>t-</em>value, degrees of freedom, <em>p</em>-value and effect size. You should have done the test with and without the graduate students and you should have graphical support for all of your tests<span class="citation" data-cites="knuth84">(<a href="#ref-knuth84" role="doc-biblioref">Knuth, 1984</a>)</span>.</p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-knuth84" class="csl-entry" role="doc-biblioentry">
+Knuth, D. E. (1984). Literate <span>Programming</span>. <em>The Computer Journal</em>, <em>27</em>(2), 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

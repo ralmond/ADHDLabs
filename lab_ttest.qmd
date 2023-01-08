@@ -1,0 +1,175 @@
+---
+title: "EDF 5400 ADHD Labs:  Part 3:  Comparing Means"
+---
+
+# Lab Three *t-*test
+
+@prevatt15 were interested in investigating students with attention deficit hyperactivity disorder (ADHD) so that they could teach them strategies to compensate for their difficulties. As sitting for an examination requires sitting quietly for long periods of time (something that persons with ADHD typically have difficulty doing), it would seem to follow that *students with ADHD might be more anxious about tests than students without ADHD* [^adhd].
+
+<!-- We need to add a lab objective to parallel the objective posted in lab three -->
+
+[^adhd]: 
+    As ADHD is a recognized disability, let me take a few minutes to describe the correct way to write about persons with disabilities. The politically correct language is "person with XXX" rather than "XXX person"; for example "person with visual difficulties" rather than "blind person" (even here it might be important to distinguish between visual difficulties, which encompasses a number of vision problems, from total blindness). 
+
+    This is most important the first time you reference the group. Thereafter, you can use the shorter form. The key idea is to always recognize that a human being has many interesting attributes and the disability is only one of them. Each person also has a race, ethnicity, gender, beliefs, abilities, knowledge, likes and dislikes. Any one of those things makes up only a small part of a person; they are not defined by it. If you keep this idea in mind as you are writing, you are unlikely to give offense (unless you do so deliberately).
+
+
+This is a conjecture, however, so the step is to find data to test our hypothesis. Obviously, we cannot perform an experiment---not only would it be unethical to artificially give a person ADHD, we don't know how to do it. So, the best that can be done is an observational study. @prevatt15 have access to students with ADHD who are coming to their clinic (this is the treatment group). They also randomly draw a control sample of students who have not been diagnosed with ADHD. They give both the patients and the control students an academic anxiety instrument.
+
+:::{.callout-note}
+Only the control group is randomly selected, the treatment group is a convenience sample, and the "treatment" in this study is a pre-existing condition, not randomly assigned. This makes the study *quasi-experimental*.
+:::
+
+## Research Question
+For the purposes of this lab, we will look at one of the research questions addressed in Prevatt et al. (2015): 
+
+> Is there a difference in academic anxiety in students with and without ADHD?
+
+Answering this question relies on two variables present in the question. The first, academic anxiety, is what we'll measure. The second is our grouping variable---an ADHD diagnosis. To answer our question we'll need to compare the anxiety scores between the two groups (i.e., *t-*test) and test whether the difference is meaningful or not (i.e., effect size). 
+
+## Data
+<!-- Which dataset they are to use is somewhat confusing. The Lab One the demo used the ACED data, but the report used the Alec data. -->
+
+We'll use the same Alec data we used in the first lab. Refer to the first lab handout for instructions on reading the data set in. If you saved your data as an SPSS .sav file after the first lab, you can use that instead of reading it in again. If you didn't save your .sav file from lab one, then you'll need to download the raw form and clean it again.
+
+Don't forget that you need to:
+
+1. add human readable labels to the variables,
+1. add string values for the nominal and ordinal variables, and 
+1. make sure the value -9 is coded as missing. 
+    
+:::{.callout-note}
+The default variable names are all programmers' codes, and not human readable. You will need to fix this for full style points. (The [Lab One](lab_one.qmd) handout has more information if you are unclear.) 
+:::
+
+This data set has lots of missing data. Some of the data are missing at random (e.g., a participant left half-way through), some of those data are structurally missing. In particular, the control students did not have all of the same measures taken about their performance that the ADHD students did. 
+
+We can use some descriptive statistical analysis to see who is in our data set. In particular, use the below command to compare the **sample sizes** of the academic anxiety score (`genanxa`) and something with fairly complete data, like `Age`, breaking the scores down by **control** and **ADHD** groups (put group in the independent variable box). 
+
+:::{.callout-note appearance="simple"}
+## SPSS Command
+[A]{.underline}nalyze > Compare [M]{.underline}eans > [M]{.underline}eans ...
+:::
+
+**What do you see?**
+
+Look carefully at the case processing summaries, from which group are most of the cases missing? What does that say about who is included in the sample? 
+
+:::{.callout-note}
+Note that the SPSS *t-*test commands will only use complete cases---students who have both anxiety scores (`genanxa`) and group identifiers (`group`)---in the analysis.
+:::
+
+
+### Exploratory Analysis
+
+You want to repeat some of the exploratory analyses from the first lab on the sample. In particular, you will want to think about comparing the academic anxiety (`genanxa`) for the two groups of students. What graphical displays could help you with that? What tables might be useful?
+
+## Confidence Intervals for the Mean
+
+Let us start with the question of what the average anxiety level is for all students. We can calculate a 95% confidence interval for the mean anxiety score using SPSS's one sample *t*-test procedure: 
+
+:::{.callout-note appearance="simple"}
+## SPSS Command
+[A]{.underline}nalyze \> Co[m]{.underline}pare Means \> One [S]{.underline}ample T Test....
+:::
+
+<!-- Rerun with the same dataset?  -->
+This should open a dialog box like <!--Figure 1--> (which uses numbers from a different example). Move the genanxa variable into place and then press the "Options..." button. Check to make sure that a 95% confidence interval was selected. The press okay a couple of times and your results should appear in the output.
+
+The first part of the output tests the proposition that the average anxiety score is zero. The right hand side of the table has our confidence interval for academic anxiety.
+ 
+<!-- ![](img/Picture1.png){width="4.65in" height="2.658333333333333in"} -->
+
+*Figure 1. One-Sample T Test dialog box*
+
+Note that variables are from a different example.
+
+<!-- ![](media/image15.png){width="2.5in" height="1.8333333333333333in"} -->
+
+*Figure 2. T Test Options Dialog box*
+
+## Hypothesis Test for Feedback
+
+We can now do an independent sample *t*-test to see if the observed difference in anxiety scores between the students with ADHD (Group 1) and the control students (Group 2) conditions can be explained by random differences in the individuals in the group (or other measurement error). We can run an independent sample *t-*test through:
+
+:::{.callout-note appearance="simple"}
+## SPSS Command
+[A]{.underline}nalyze \> Co[m]{.underline}pare Means \> Independen[t]{.underline}-Sample T-Test...
+:::
+
+<!-- ![](media/image16.png){width="4.65in" height="2.8833333333333333in"} -->
+
+*Figure 3. Independent-Sample T Test dialog box*
+
+Again, example taken from a different data set*.*
+
+First, fill in the "Test Variables" with the dependent or outcome variable. In the example (from the in-class portion of the lab), this was the temperature. In your case, it will be the academic anxiety variable (genanxa).
+
+<!-- ![](media/image17.png){width="2.15in" height="1.875in"} -->
+
+*Figure 4. Defining Groups for the T Test*
+
+Again, your group numbers may differ from the example.
+
+Second, fill in the "Grouping Variable" slot with an appropriate value for condition code. First, press Define Groups... to describe the groups. Because the groups are coded with integers, put "1" and "2" into the dialog box. (If you had used strings instead of numbers to code the groups, you would have needed to put the string, for example, "Male" and "Female", in the box.) When you are done the dialog box will look something like Figure 4.
+ 
+Press OK and the *t-*test results will appear in the output window. It will also produce a table with means and standard deviations and a 95% confidence interval for the mean. (If you want a different level for the confidence interval, you can select that through the Options... button on the *t-*test dialog.)
+
+## Effect Size
+
+The last thing we need is an effect size. Unfortunately, SPSS does not seem to calculate the effect size. This isn't too hard, all we need to do is divide the mean effect (we can find that in either the *t-*test output or by taking the difference between the means in the means table) by the standard deviation. The only question is which standard deviation.
+
+Unfortunately, SPSS does not calculate that either. What we want is the pooled standard deviation, which contains information from both the full and accuracy only conditions. We get this by averaging the variance (remember the standard deviations have a square root in them). Properly speaking, we want a weighted average, where the weights are related to the degrees of freedom.
+
+Let $n_{2}$ be the number of subjects in the control group and let $n_{3}$ be the number of subjects in the ADAD group. Let $s_{2}$ be the standard deviation of the control group and $s_{3}$ be the standard deviation of the ADHD group. We want to weight the variances by the degrees of freedom, that is, the number in the sample minus one. Thus the pooled standard deviation will be:
+
+$\sqrt{\frac{\left( n_{2} - 1 \right)s_{2}^{2} + \left( n_{3} - 1 \right)s_{3}^{2}}{n_{2} + n_{3} - 1}}$
+
+<!-- Now that we have quarto/shiny/dash we could make our own FSU M&S calculators -->
+
+A former TA, Haiyan Wu (with some cleanup by another TA, Zhongtian Liang), put together an Excel spreadsheet which has the formula in it. This is available at [[http://pluto.coe.fsu.edu/effectSize\_d.xls]{.underline}](http://pluto.coe.fsu.edu/effectSize_d.xls). To use this spreadsheet, you need to find the means, standard deviations and group sizes and put them in the appropriate cells. This will calculate the effect size.
+
+## The Graduate Students
+
+As most of you have probably learned by now, graduate school is somewhat different from undergraduate education. There are 85 graduate students in the data file, but looking at @table_one, they are underrepresented in the control group compared to the ADHD group. Consequently, we might want to remove them from the analysis to see if that makes a difference.
+
+
+:::{.callout-note appearance="simple" collapse="true"}
+Table 1 was created using: 
+
+[A]{.underline}nalyze \> Co[m]{.underline}pare Means \> Independen[t]{.underline}-Sample T-Test...
+:::
+
+<!-- Need whatever table this is to be -->
+Table 1. Students by year and condition group
+
+<!-- ![](media/image18.png){width="6.0in" height="1.6472222222222221in"} -->
+
+To test if the graduate students make a difference, we can remove them
+from our analysis. To remove the graduate students and rerun the analysis use:
+
+:::{.callout-note appearance="simple"}
+## SPSS Command
+[D]{.underline}ata \> [S]{.underline}elect Cases...
+:::
+
+Press the "If ..." button and enter the expression 
+
+```default
+Year ~= 5 
+```
+<!-- Good place for a photo -->
+
+:::{.callout-note}
+`~=` is the way SPSS expresses *not equals*, and 5 is the numeric code for graduate students (@codebook).
+:::
+
+Does removing the graduate students make a big difference in any of the conclusions?
+
+Sometimes, although not with these data, you may need more complicated expressions. You can do this using the "&" (and) and "\|" (or) operators. For example to select subject who have condition code 1 or 2 but not level code 6, you would use:
+
+```default
+(Condition_Code = 1 | Condition_Code = 2) & Level_Code ~= 6
+```
+
+You also have a choice here. You should not report both the full data numbers and the graduate students removed numbers, rather, you should think of one as primary and the other as secondary. Report the results for one, and then describe the difference when you remove (or add back in) the graduate students. However, think about the problem of which group of students to use as the main and which as the secondary analysis and then pick that one.

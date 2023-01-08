@@ -1,3 +1,11 @@
+---
+title: "EDF 5400 ADHD Labs:  Regression Prediction"
+---
+
+This material is optional as it is no longer required, but still may
+be interesting. 
+ 
+
 ### Predicting Future Observations
 
 <!-- Removed this from L3 to reduce workload. Idea is to polish this body of text into it's own optional section. -->

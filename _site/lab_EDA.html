@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Russell Almond">
+<meta name="dcterms.date" content="2022-05-22">
+
+<title>EDF 5400 ADHD Lab instructions and Rubrics - Lab Two Exploratory Data Analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./img/fsu-seal-3d-1.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_dataEntry.html">
+ <span class="menu-text">Part 1: Data Cleaning</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./lab_EDA.html" aria-current="page">
+ <span class="menu-text">Part 2: EDA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_ttest.html">
+ <span class="menu-text">Part 3: t-test</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_regression.html">
+ <span class="menu-text">Part 4: Regression</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_final_report.html">
+ <span class="menu-text">Final Report</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data_library.html">
+ <span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./equ_abrev.html">
+ <span class="menu-text">Notation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./style.html">
+ <span class="menu-text">Style Guide</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./SPSS_commands.html">
+ <span class="menu-text">SPSS Command Reference</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./faq.html">
+ <span class="menu-text">F.A.Q.</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./reg_prediction.html">
+ <span class="menu-text">Prediction (Extra)</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-recap-of-part-1" id="toc-a-recap-of-part-1" class="nav-link active" data-scroll-target="#a-recap-of-part-1">A Recap of Part 1</a></li>
+  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a>
+  <ul class="collapse">
+  <li><a href="#measures-of-center" id="toc-measures-of-center" class="nav-link" data-scroll-target="#measures-of-center">Measures of Center</a></li>
+  <li><a href="#measures-of-scale" id="toc-measures-of-scale" class="nav-link" data-scroll-target="#measures-of-scale">Measures of Scale</a></li>
+  <li><a href="#skewness-and-kurtosis" id="toc-skewness-and-kurtosis" class="nav-link" data-scroll-target="#skewness-and-kurtosis">Skewness and Kurtosis</a></li>
+  </ul></li>
+  <li><a href="#describing-data" id="toc-describing-data" class="nav-link" data-scroll-target="#describing-data">Describing Data</a>
+  <ul class="collapse">
+  <li><a href="#describe" id="toc-describe" class="nav-link" data-scroll-target="#describe">Describe</a></li>
+  <li><a href="#frequencies" id="toc-frequencies" class="nav-link" data-scroll-target="#frequencies">Frequencies</a></li>
+  <li><a href="#table-styles" id="toc-table-styles" class="nav-link" data-scroll-target="#table-styles">Table Styles</a></li>
+  </ul></li>
+  <li><a href="#one-dimensional-graphical-summaries" id="toc-one-dimensional-graphical-summaries" class="nav-link" data-scroll-target="#one-dimensional-graphical-summaries">One-dimensional Graphical Summaries</a>
+  <ul class="collapse">
+  <li><a href="#histograms" id="toc-histograms" class="nav-link" data-scroll-target="#histograms">Histograms</a></li>
+  <li><a href="#boxplots" id="toc-boxplots" class="nav-link" data-scroll-target="#boxplots">Boxplots</a></li>
+  <li><a href="#barcharts" id="toc-barcharts" class="nav-link" data-scroll-target="#barcharts">Barcharts</a></li>
+  <li><a href="#pie-charts" id="toc-pie-charts" class="nav-link" data-scroll-target="#pie-charts">Pie Charts</a></li>
+  </ul></li>
+  <li><a href="#creating-new-variables" id="toc-creating-new-variables" class="nav-link" data-scroll-target="#creating-new-variables">Creating New Variables</a>
+  <ul class="collapse">
+  <li><a href="#compute-variables" id="toc-compute-variables" class="nav-link" data-scroll-target="#compute-variables">Compute Variables</a></li>
+  <li><a href="#recoding-variables" id="toc-recoding-variables" class="nav-link" data-scroll-target="#recoding-variables">Recoding Variables</a>
+  <ul class="collapse">
+  <li><a href="#string-to-numeric" id="toc-string-to-numeric" class="nav-link" data-scroll-target="#string-to-numeric">String to Numeric</a></li>
+  <li><a href="#collapsing-categories" id="toc-collapsing-categories" class="nav-link" data-scroll-target="#collapsing-categories">Collapsing Categories</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#breakdown-by-category" id="toc-breakdown-by-category" class="nav-link" data-scroll-target="#breakdown-by-category">Breakdown by Category</a>
+  <ul class="collapse">
+  <li><a href="#cross-tabs" id="toc-cross-tabs" class="nav-link" data-scroll-target="#cross-tabs">Cross-tabs</a></li>
+  <li><a href="#pivoting-tables" id="toc-pivoting-tables" class="nav-link" data-scroll-target="#pivoting-tables">Pivoting Tables</a></li>
+  <li><a href="#boxplots-and-barplots" id="toc-boxplots-and-barplots" class="nav-link" data-scroll-target="#boxplots-and-barplots">Boxplots and Barplots</a></li>
+  <li><a href="#paneling-by-rows-and-columns" id="toc-paneling-by-rows-and-columns" class="nav-link" data-scroll-target="#paneling-by-rows-and-columns">Paneling by Rows and Columns</a></li>
+  </ul></li>
+  <li><a href="#looking-at-subsets-of-data" id="toc-looking-at-subsets-of-data" class="nav-link" data-scroll-target="#looking-at-subsets-of-data">Looking at Subsets of Data</a></li>
+  <li><a href="#chosing-graphics" id="toc-chosing-graphics" class="nav-link" data-scroll-target="#chosing-graphics">Chosing Graphics</a>
+  <ul class="collapse">
+  <li><a href="#make-the-figures-and-tables-part-of-the-story" id="toc-make-the-figures-and-tables-part-of-the-story" class="nav-link" data-scroll-target="#make-the-figures-and-tables-part-of-the-story">Make the figures and tables part of the story</a></li>
+  <li><a href="#graphs-at-end-versus-graphs-in-text" id="toc-graphs-at-end-versus-graphs-in-text" class="nav-link" data-scroll-target="#graphs-at-end-versus-graphs-in-text">Graphs at end, versus graphs in text</a></li>
+  <li><a href="#figures-tables-and-captions" id="toc-figures-tables-and-captions" class="nav-link" data-scroll-target="#figures-tables-and-captions">Figures, Tables and Captions</a></li>
+  <li><a href="#meaningful-labels" id="toc-meaningful-labels" class="nav-link" data-scroll-target="#meaningful-labels">Meaningful Labels</a></li>
+  <li><a href="#digits-and-unnecessary-statistics" id="toc-digits-and-unnecessary-statistics" class="nav-link" data-scroll-target="#digits-and-unnecessary-statistics">Digits and Unnecessary Statistics</a></li>
+  </ul></li>
+  <li><a href="#your-mission" id="toc-your-mission" class="nav-link" data-scroll-target="#your-mission">Your Mission</a></li>
+  <li><a href="#rubric-for-the-lab" id="toc-rubric-for-the-lab" class="nav-link" data-scroll-target="#rubric-for-the-lab">Rubric for the Lab</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab Two Exploratory Data Analysis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Russell Almond </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 22, 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="a-recap-of-part-1" class="level1">
+<h1>A Recap of Part 1</h1>
+<p>Part 1 talked about how to load the data into SPSS and clean it.</p>
+<p>I have a slightly larger version of the ACED data set already loaded and cleaned here: <a href="https://pluto.coe.fsu.edu/svn/common/rgroup-shiny/ADHDLab/ACED-Subset-New.sav">ACED-Subset-New.sav</a></p>
+</section>
+<section id="exploratory-data-analysis" class="level1">
+<h1>Exploratory Data Analysis</h1>
+<p>The goal of exploratory data analysis is to get a feeling for the data. This helps the analyst (1) check that the data was properly entered and cleaned, (2) understand what to expect from the data, and (3) look at potential problems and solutions.</p>
+<p>Although the goal is to work model free, a big question at this stage is “Are the data close enough to normal to used statistics based on the normal distribution?” To do that the analyst want to look at the skewness and kurtosis. In particular, either strong positive or negative skewness or high kurtosis mean the analyst should consider either transformations of the variables, or robust alternatives to the standard normal theory tests. Usually graphical displays, particularly, histograms and boxplots, are best for judging skewness and kurtosis.</p>
+<p>The other thing we want to mention here is the center and spread. This means either the mean and standard deviation or one of the robust alternatives.</p>
+<p>It is also important to look at the number of valid (non-missing) observations. If this is substantially different from the total sample size, it can tell the analyst that only a subset of the subjects were measured on some particular variable. In particular, it can add a selection bias to the statistic, making the results harder to generalize.</p>
+<section id="measures-of-center" class="level2">
+<h2 class="anchored" data-anchor-id="measures-of-center">Measures of Center</h2>
+<p>The two most used measures of center are the <code>mean</code> and the <code>median</code>.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Efficient (Normal)</th>
+<th>Robust</th>
+<th>Poor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mean</td>
+<td>median</td>
+<td>minimum, maximum, mode</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>mean</code> is the efficient choice, that means that if the data are approximately normal, the mean will have the lowest standard error for the given sample size. However, the mean is sensitive to outliers, which are commonly found in distributions with high kurtosis, or strong positive or negative skewness.</p>
+<p>The <code>median</code> is more robust to departures from normality resistant to outliers, but if the data are approximately normally distributed, the standard error of the median is generally bigger than the standard error of the mean.</p>
+<p>The <code>minimum</code> and <code>maximum</code>, although very useful for data cleaning, are not really useful for describing the location of the data. If there is one or more outliers, chances are it will be the minimum, the maximum or both.</p>
+<p>The <code>mode</code> is also not a particularly good measure of center. Technically, if all of the values are unique, then they are all modes, so we haven’t reduced the data at all. If there are multiple modes, SPSS just reports the lowest (with a footnote), so real analysts seldom bother with it.</p>
+</section>
+<section id="measures-of-scale" class="level2">
+<h2 class="anchored" data-anchor-id="measures-of-scale">Measures of Scale</h2>
+<p>The spread is related to how closely the data points are grouped around the center. The <em>standard deviation</em> (<code>SD</code>) is the usual choice, and the <em>interquartile range</em> (<code>IQR</code>) offers a robust alternative.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Efficient (Normal)</th>
+<th>Robust</th>
+<th>Poor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>sd</td>
+<td>IQR</td>
+<td>range</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>mad</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The formal statistical definition of the range is <code>max - min</code>. It is fairly common to think of the pair <code>(min, max)</code> as the range, but that is not what SPSS (or R) computes. While the actual min and max have some value in checking that the data are properly cleaned, the range itself is neither robust nor efficient.</p>
+<p>The <em>median absolute deviation</em> (<code>mad</code>) is another robust measure of spread. Unfortunately, SPSS does not allow us to select it when making tables of summary statistics.</p>
+</section>
+<section id="skewness-and-kurtosis" class="level2">
+<h2 class="anchored" data-anchor-id="skewness-and-kurtosis">Skewness and Kurtosis</h2>
+<p>Usually, the best way to judge skewness or kurtosis is graphically (using a histogram or a boxplot). However, SPSS offers a skewness and kurtosis statistic as well.</p>
+<p>A symmetric distribution (like the normal distribution) has a skewness of zero; negative values of the skewness statistic indicate negative skewness; positive values, positive skewness. In practice, a given set of data is rarely perfectly symmetric; a sample from a symmetric distribution will have a non-zero skewness statistic. This is not an issue, unless the skewness is very strong (positive or negative).</p>
+<p>How strong is a cause for concern? The heuristic I use is to divide the skewness statistic by its standard error (also calculated by SPSS). If the result is bigger than 2 (or less than -2), then I think that skewness may be an issue. Otherwise, I go ahead using normal-theory methods. (By the central limit theorem, if the data are only slightly non-normal, the distribution of the mean will be pretty close to normal.)</p>
+<p>I use a similar heuristic for the kurtosis. The kurtosis statistic is scaled so that the normal distribution has a kurtosis of zero. Only if the kurtosis statistic is bigger than two standard errors do I start to worry. Here, I only worry about high kurtosis (heavy tails) as that means lots of outliers. (High kurtosis slows down the central limit theorem, but low kurtosis is not a problem.)</p>
+</section>
+</section>
+<section id="describing-data" class="level1">
+<h1>Describing Data</h1>
+<p>This section will look at generating tables of statistics; there are two commands <code>Descriptives...</code> and <code>Frequencies...</code> which both produce tables of statistics.</p>
+<section id="describe" class="level2">
+<h2 class="anchored" data-anchor-id="describe">Describe</h2>
+<p>Select the menu item <code>Analyze &gt; Descriptive Statistics &gt; Descriptive...</code> [Alt+A E D]; Figure 1 shows the resulting dialog.</p>
+<p><img src="img/Descriptives1.png" class="img-fluid" alt="Descriptives Diaglog"> Select on the variables in the left hand column and then press the arrow to move them to the right hand side (the variables to be used). By default it shows the labels for the variables (with the names in square brackets), but you can right click on one of the variable names to switch the view to names (or back to labels if it is showing names). Click on the Options button to select statistics; Figure 2 shows the statistic selection dialog.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/DescriptivesOptions.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Descriptives Options</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="frequencies" class="level2">
+<h2 class="anchored" data-anchor-id="frequencies">Frequencies</h2>
+<p>The command <code>Analyze &gt; Descriptive Statistics &gt; Frequencies... [Alt+A E F]</code> also produces statistics (although some statistics, like mean, only make sense if the variable is a scale variable, the mean of a nominal variable is undefined). Figure 3 shows the dialog box.</p>
+<p><img src="img/Frequencies1.png" class="img-fluid" alt="Frequencies Selection Dialog"> The <code>Statistics...</code> button allows you to select which statistics you want to display; Figure 4 shows that dialog. Note also that <code>Display frequency tables</code> is not checked. Unless there are only a few possible values (i.e., it is a nominal or ordinal variable) the resulting table is usually not very interesting.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/FrequenciesStatistics.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Frequency Statistics Selection</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="table-styles" class="level2">
+<h2 class="anchored" data-anchor-id="table-styles">Table Styles</h2>
+<p>Both the descriptives and frequencies commands will produce a table in the SPSS output, typically in SPSS style (which shades the row and column headers). Although recent versions of SPSS produce tables which are not too difficult to read, they are not APA style. The table editor provides a means of changing the style of the table.</p>
+<ol type="1">
+<li>Double click on the table to open it for editing.</li>
+<li>Look at the menu marked “Format &gt; Table Looks…”</li>
+<li>“Academic” style is more or less APA style.</li>
+</ol>
+<p>The result will look like Figure 5.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/DescriptivesTable.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Descriptives Table Output</figcaption><p></p>
+</figure>
+</div>
+<p>Be careful because SPSS tables often contain variables you don’t need, or way too many digits. Generally Speaking, the units for numbers should make the number of digits in the raw data. For questionnaires that are mostly counts, this means no decimals. For money, are you rounding to the nearest cent? dollar? hundred dollars?</p>
+<ul>
+<li>Means and medians can take one more digit (so if the raw data is an integer, round means to the nearest tenth).</li>
+<li>SDs can take two additional digits (so to the nearest hundredth).</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/TableEditorDigits.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Editing Digits in the Table Editor</figcaption><p></p>
+</figure>
+</div>
+<p>In the table editor (Figure 6, double click on the table to edit), select the cells you want to edit, and press the add or remove digits button to get a reasonable number of digits.</p>
+<p>Tables are generally numbered <code>Table</code>&nbsp;<em>n</em>, where the numbers are in order of appearance. (Books use numbers of the form <em>chapter</em><code>.</code><em>table</em>; but papers, like the one you are writing for class,just use sequential numbers.) The space between <code>Table</code> and the number should be a non-breaking space. Give the caption a human readable description of what is in the table. The caption for a table goes above the table.</p>
+<p>Caption the table in Word (or whatever word processor you are using) not SPSS, as you may need to renumber it later. Also, make sure that the table doesn’t split across page boundaries, or get separated from hits caption. (There are check boxes for these things in Word).</p>
+</section>
+</section>
+<section id="one-dimensional-graphical-summaries" class="level1">
+<h1>One-dimensional Graphical Summaries</h1>
+<p>Most of the commands for building graphs are located in the <code>Graph &gt; Legacy</code> menu, Figure 7.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/LegacyGraphsMenu.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Most graph commands are located in the <code>Graph &gt; Legacy</code> submenu</figcaption><p></p>
+</figure>
+</div>
+<section id="histograms" class="level2">
+<h2 class="anchored" data-anchor-id="histograms">Histograms</h2>
+<p><code>Graphs &gt; Legacy Dialogs &gt; Histogram...</code> [Alt+G L I]</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/Histogram.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Histogram Dialog</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/HistogramEditor.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Histogram Editor</figcaption><p></p>
+</figure>
+</div>
+<p>In the graph editor you can edit X and Y axis labels and play with the appearance of the graph.</p>
+<ul>
+<li><p>The button with a grid of dots is used to open a dialog which can be used to adjust the number of bins in the histogram.</p></li>
+<li><p>The button with the normal curve can be used to add a normal or other distributional curve.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/AddDistribution.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Distribution Selection Dialog</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="boxplots" class="level2">
+<h2 class="anchored" data-anchor-id="boxplots">Boxplots</h2>
+<p><code>Graphs &gt; Legacy Dialogs &gt; Boxplot...</code> [Alt+G L X]</p>
+<p>There are two modes in which you can draw boxplots: Each boxplot is a different variable, or each boxplot is a different group of cases. For a whole variable summary, pick variables.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/BoxplotMode.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Boxplot Mode Variables</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/BoxplotVariables.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Boxplot Variable Selection</figcaption><p></p>
+</figure>
+</div>
+<p>Select the variables you want. The “Case Labels” is optional, it gives you strings for identifying outliers instead of numbers.</p>
+<p>Becareful that all of the variables need to be on compatible scales. In this cases, the “Correct” and “Incorrect” scores were out of 63 items, but the ACED score is on a different scale (-1 to 1); so it just doesn’t look good.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/BoxplotExample.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Boxplot Example with fourth variable on a different scale</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="barcharts" class="level2">
+<h2 class="anchored" data-anchor-id="barcharts">Barcharts</h2>
+<p><code>Graphs &gt; Legacy Dialogs &gt; Bar...</code> [Alt+G L B]</p>
+<p>There are a number of ways of doing bar charts. You can select them through the “mode selection dialog” that pops up when you select the bar charts menu option. function. (These mostly matter when you are looking at the relationship between two discrete variables.) Simple bar charts are used to summarize a single variable (often counts of cases), and the clustered and stacked look at two variables (usually at least one of which is categorical variables. By selecting “groups of cases”, the barplot will focus on the counts in each category.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/BarChartMode.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Barplot Mode Selection</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/BarplotEditor.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Add numbers button in Graph Editor</figcaption><p></p>
+</figure>
+</div>
+<p>The icon with the numbers above the bars adds counts to the bars. (It works with pie charts, too).</p>
+</section>
+<section id="pie-charts" class="level2">
+<h2 class="anchored" data-anchor-id="pie-charts">Pie Charts</h2>
+<p><code>Graphs &gt; Legacy Dialogs &gt; Pie...</code> [Alt+G L E]</p>
+<ul>
+<li>Angles are harder to judge than lengths, so pie charts are harder to read than bar charts.
+<ul>
+<li>3D pie charts add a visual rotation to the angle judgement, makeing them even worse than 2d pie charts.</li>
+</ul></li>
+<li>Pie charts give a better sense of part-of-whole than do bar charts.</li>
+</ul>
+</section>
+</section>
+<section id="creating-new-variables" class="level1">
+<h1>Creating New Variables</h1>
+<p>SPSS allows you to perform mathematical operations on scale variables (and some logical operations on nominal and ordianl ones) to create new variables.</p>
+<p>SPSS allows you to recode nominal and ordinal variables in several ways.</p>
+<section id="compute-variables" class="level2">
+<h2 class="anchored" data-anchor-id="compute-variables">Compute Variables</h2>
+<p>Select <code>Transform &gt; Compute Variable ...</code> [Alt+T C]</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/ComputeVariable.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Calculate a gain score by subtracting two scores</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="recoding-variables" class="level2">
+<h2 class="anchored" data-anchor-id="recoding-variables">Recoding Variables</h2>
+<p>The <code>Automatic Recode</code> command will work for simple transformations of nominal variables, particularly translating strings to numbers.</p>
+<p>The <code>Recode into Different Categories...</code> works for more complex cases, including dropping categories and adding missing values.</p>
+<section id="string-to-numeric" class="level3">
+<h3 class="anchored" data-anchor-id="string-to-numeric">String to Numeric</h3>
+<p>There are some SPSS commands which prefer numeric values for nominal or ordinal values. Automatic Recode can be used to map strings to numbers.</p>
+<p><code>Transform &gt; Automatic Recode ...</code> [Alt+T A]</p>
+<p><img src="AutomaticRecode.png" class="img-fluid" alt="Automatic Recode">.</p>
+<p>Note that SPSS assigns the numeric labels alphabetically. This is fine when the values are “Male” and “Female” as which one gets 1 and which 2 (in this case Female=1 and Male=2) is arbitrary. This can cause a problem when the natural order is not alphabetical (High=1, Medium=3, Low =2).</p>
+</section>
+<section id="collapsing-categories" class="level3">
+<h3 class="anchored" data-anchor-id="collapsing-categories">Collapsing Categories</h3>
+<p><code>Transform &gt; Recode into Different Variables...</code> [Alt+T R]</p>
+<p>This function allows the analyst to collapse different categories. In the example below, categories 1, 4 and 5 are combined into a single new category 1, and 6, 7 and 8 are renumbered to close the gap.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/RecodeDifferentExample.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Transformation collapsing categories</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="breakdown-by-category" class="level1">
+<h1>Breakdown by Category</h1>
+<section id="cross-tabs" class="level2">
+<h2 class="anchored" data-anchor-id="cross-tabs">Cross-tabs</h2>
+<p><code>Analyze &gt; Compare Means &gt; Means…</code> [Alt+A M M] or <code>Analyze &gt; Descriptive Statistics &gt; Crosstabs...</code> [Alt+A E C]</p>
+<p>The former is good for breaking a scale variable down by a nominal or ordinal one. The latter for breaking down a nominal or ordinal variable by the another nominal or ordinal variable.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/CompareMeans.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Compare Means Dialog</figcaption><p></p>
+</figure>
+</div>
+<p>For the crosstabs, try both rows and columns, which one tells the story better. Also, don’t select more than one of “Row percentages”, “Column percentages”, or “Total percentages”, the table just gets too confusing.</p>
+</section>
+<section id="pivoting-tables" class="level2">
+<h2 class="anchored" data-anchor-id="pivoting-tables">Pivoting Tables</h2>
+<p>By default, SPSS does not lay out the compare Means table well. The analyst eye needs to jump over several rows in the table to compare the mean for Group 1 on Variable 1, to the mean for Group 2 on the same variable.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/TableEditor.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Table Editor with Pivot Button</figcaption><p></p>
+</figure>
+</div>
+<p>Pivoting the table can fix this. (This can be done in SPSS, or in a spreadsheet package like Excel.) Open the table editor, and select the “Pivot” icon. You can then drag the dimension labels to swap the rows and columns and which dimension is nested within which other dimension.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/PivotingTrays.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Pivot table trays</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="boxplots-and-barplots" class="level2">
+<h2 class="anchored" data-anchor-id="boxplots-and-barplots">Boxplots and Barplots</h2>
+<p><code>Graphs &gt; Legacy Dialogs &gt; Boxplot...</code> [Alt+G L X]</p>
+<p>Now select the other mode in the boxplot:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/BoxplotModeGroups.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Boxplot mode by groups</figcaption><p></p>
+</figure>
+</div>
+<p>There is a new field “Category Axis” in the dialog, this is where the grouping variable goes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/boxplotGroups.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Grouped Boxplot dialog</figcaption><p></p>
+</figure>
+</div>
+<p><code>Graphs &gt; Legacy Dialogs &gt; Bar...</code> [Alt+G L B]</p>
+<p>Bar charts are similar. When you have two categorical variables, sometimes swapping which one is the main variable and which defines the clusters will make a better plot. Try it both ways to see.</p>
+</section>
+<section id="paneling-by-rows-and-columns" class="level2">
+<h2 class="anchored" data-anchor-id="paneling-by-rows-and-columns">Paneling by Rows and Columns</h2>
+<p><code>Graphs &gt; Legacy Dialogs &gt; Histogram...</code>[Alt+G L I],</p>
+<p>Adding a grouping variable to the “Panel by Rows” field in the histogram dialog will produce multiple histograms that share an axis:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/HistogramPanels.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Histograms Paneled by Rows</figcaption><p></p>
+</figure>
+</div>
+<p>For histograms paneling by rows in much better than paneling by columns because it lines up the X-axis (it doesn’t matter as much with other graph types). The graph by race is paneled by rows. Note how this makes it easy to judge the difference in center or spread.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/HistByRace.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Histogram with Rows equal to Race Groups</figcaption><p></p>
+</figure>
+</div>
+<p>The histogram by columns is harder to read, even though there are fewer groups.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/HistByGenderCols.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Histogram with Columns equal to Gender</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="looking-at-subsets-of-data" class="level1">
+<h1>Looking at Subsets of Data</h1>
+<ul>
+<li>(Temporarily) Remove outliers</li>
+<li>Temporarily Remove Group</li>
+</ul>
+<p><em>Sensitivity Analysis</em>: Remove potentially influential observations and see how much statistics change.</p>
+<p><code>Data &gt; Select Cases ...</code> [Alt+D S]</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/SelectCasesIfNotEQ.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Add an express to select just the case need.</figcaption><p></p>
+</figure>
+</div>
+<p>The rows will then disappear from the Variables view.</p>
+<p>Looking at the count in the descriptions of a key variable can help check that it worked right:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/DescriptivesWithZeros.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Descriptives before filtering</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/DescriptivesWithoutZeros.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Descriptives after filtering</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Don’t forget to reselect all cases when you are done!</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="SelectCasesBlank.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Select all case</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="chosing-graphics" class="level1">
+<h1>Chosing Graphics</h1>
+<p>Just as a paper with too much text is hard to read, a paper with too many graphs is hard to read. Make sure that the graphs you use count. A table with just one or two important numbers, it better handled in the text, but a table that organizes a lot of numbers is really useful.</p>
+<section id="make-the-figures-and-tables-part-of-the-story" class="level2">
+<h2 class="anchored" data-anchor-id="make-the-figures-and-tables-part-of-the-story">Make the figures and tables part of the story</h2>
+<p>The paper is telling a story, a story about the research question. Every figure and table included in the paper should be advancing that story in some way. If not, save it for use elsewhere.</p>
+<p><em>Rule of thumb</em>: Every figure and table should have a figure or table number, and should be referenced by number somewhere in the text. If its not referenced in the text, why waste the reader’s time.</p>
+</section>
+<section id="graphs-at-end-versus-graphs-in-text" class="level2">
+<h2 class="anchored" data-anchor-id="graphs-at-end-versus-graphs-in-text">Graphs at end, versus graphs in text</h2>
+<p>In the 20th century, manuscripts were often typewritten, and figures and tables were submitted on separate sheets. The manuscript would say some like <code>&lt;&lt;FIGURE 1 ABOUT HERE&gt;&gt;</code> where they wanted the figure. The publisher was then responsible for adding the figure. Generally the figure should be placed right after the first paragraph of mention. But if there is not enough room, it might “float” to the top of the next page.</p>
+<p>I find it easier to read when figures and tables are in approximately the place that they will be in the final manuscript. While LaTeX does an excellent job of placing Figure and Tables, Microsoft Word (and Libre Office Writer, and Google Docs, and Apple Pages) aren’t quite so good. Especially, as paragraphs expand and contract, the figures may need to be moved for optimal placement. Because the figures can float, it is important to refer to them by number and not using position references like “above” or “below” which could change.</p>
+<p>Be careful with tables. Word, by default, allows tables to split across page boundaries. This makes them harder to read. Unless the table is very long, it should be avoided. There should be an option to keep the table together in the table properties (the location, however, will vary with the word processor and the version of the word processor in use).</p>
+<p>Sometimes, publishers in the 21st century still want all the figures at the end of the document. <em>This is not an appendix</em>, it is just the figures or tables. Once again, it is important to refer to them by number as the positions will be set later.</p>
+<p>For the lab assignment, you may use either approach (but don’t try to mix them, that is just ugly).</p>
+</section>
+<section id="figures-tables-and-captions" class="level2">
+<h2 class="anchored" data-anchor-id="figures-tables-and-captions">Figures, Tables and Captions</h2>
+<p>Each figure and table should have a clear caption that tells the reader what is in the figure or table. Don’t use abbreviations. The APA convention is to put captions for figures above the figure and captions for tables below the figure. The caption should be done in the word processor, not SPSS, as the figures and tables may need to be renumbered. Also, the caption should be on the same page with the figure or table (or else it is “widowed”). There is often an option to “keep with next paragraph” in the paragraph dialog.</p>
+<p>Figures and tables are numbered separately, usually with consecutive integers. (Books will sometimes use number of the form <em>chapter.figure</em>, but papers usually use a single number.) Generally figure numbers start with <code>Figure</code> or <code>Fig.</code> and table numbers with <code>Table</code> or <code>Tab.</code> The <code>F</code> or <code>T</code> is capitalized when “figure” or “table” is followed by a number, and it become a proper noun (i.e., it does not take an article like “the” or “a”). If referring to it in the text, it is better to put a non-breaking space between the word and the number, so this does not split across lines. The easiest way to reference a figure or table is to just put <code>(Figure xxx)</code> or <code>(Table yyy)</code> after the sentence where it is referenced. The word “see” is implied and is usually omitted to save space.</p>
+</section>
+<section id="meaningful-labels" class="level2">
+<h2 class="anchored" data-anchor-id="meaningful-labels">Meaningful Labels</h2>
+<p>To an analyst in the middle of project, the short code names given to variables (e.g., “GADD” or “hyper”) are familiar friends. When preparing tables and graphs for exploratory use, it is fine to use these abbreviated names. When it come time to prepare the graph or table for publication, be kind to the reader who is often not a member of the research team. The short SPSS variable names should be replaced with longer, human readable names. If there is additional data (such as units) it is often good to put this there as well. So while “Population” is better than “Pop.”, “Population (in thousands)” is better still.</p>
+<p>SPSS provides an easy way to do this: go into the variables view and add a “Label” to each variable. While the variable name is a short and must follow certain conventions (e.g., no spaces) the label can be any descriptive string. SPSS will use labels for axis labels on graphs and column/row labels in tables if it has them.</p>
+<p>Also, take some time to make the captions on the tables and graphs provide as much information as possible. It should be able to get a good idea of what is in the table while only skimming the text. If there are abbreviations in the table or graph that need explanation, add a footnote to the table.</p>
+</section>
+<section id="digits-and-unnecessary-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="digits-and-unnecessary-statistics">Digits and Unnecessary Statistics</h2>
+<p>Using too many digits in a statistic is confusing. It gives the spurious impression of precision. If the average salary of a teacher was $52,752.345 versus $52,752.346 does anybody really care.</p>
+<p>The rule of thumb I use is to look at the number of digits used in the measurement. (In the ALEC data, almost everything is a count, so that is 0 significant digits.) I use one more digit for the mean, and two more for the standard deviation. I usually report correlations to 2 or 3 digits (depending on how big it is) and the same thing with probabilities. (BTW, probabilities and correlations in APA style don’t take a leading zero.)</p>
+<p>However, there are some exceptions. For example, SAT scores come in multiple of tens, so there should be no digits after the decimal for means and only one digit for the Standard Deviation.</p>
+<p>You may find <a href="https://www.scribbr.com/apa-style/numbers-and-statistics/">this article</a> on reporting statistics in APA style useful.</p>
+</section>
+</section>
+<section id="your-mission" class="level1">
+<h1>Your Mission</h1>
+<p>The variables in the lab can be grouped into several categories:</p>
+<ul>
+<li><p><em>Study Condition</em>: Group</p></li>
+<li><p><em>Background Variables</em>: Gender, Year, Age, Ethnicity</p></li>
+<li><p><em>SAT</em>: SAT, SATVERBAL, SATQUANT, SATWRIT</p>
+<ul>
+<li>Also, create SATTOTAL by adding Verbal and Quant</li>
+</ul></li>
+<li><p><em>Anxiety Measures</em>: GADD, genaxa</p></li>
+<li><p><em>Panic Measures</em>: PAG, paa</p></li>
+<li><p><em>ADHD Measures</em>: inatt, hyper</p>
+<ul>
+<li>The complete ADHD measure is the sum of inatt and hyper.</li>
+<li>Note carefully that the sample size for the ADHD measure is much smaller than for the background variables. Why this discrepancy and who is missing?</li>
+</ul></li>
+</ul>
+<ol type="1">
+<li><p>Describe how the sample is broken down by “Year”. Also, look at the relationship between “Year” and “group”. You will want to use a graph or table to support your results.</p></li>
+<li><p>Describe the distribution of Age in the sample. You should include measures of center and scale and a description of skewness and kurtosis. Include a figure which shows the distribution.</p></li>
+<li><p>Describe the distribution of the SATTOTAL (note, you will need to compute this variable, it is not in the original data set). Again, include center, scale, skewness, kurtosis and a figure to support the latter.</p></li>
+<li><p>Describe the distribution of the anxiety and panic measures. Again, include center, scale, skewness, kurtosis and a figure to support the latter.</p></li>
+<li><p>Describe the distribution of the inatt, hyper, and total ADHD symptoms measures (you will need to compute this). Again, include center, scale, skewness, kurtosis and a figure to support the latter.</p></li>
+<li><p>Pick on of the anxiety or panic measures and describe how it differs across year in school (Freshman, Junior, &amp;c.).</p></li>
+</ol>
+<p>You can append this information to the Part 1 draft: this is the first subsection in the “Results” section.</p>
+</section>
+<section id="rubric-for-the-lab" class="level1">
+<h1>Rubric for the Lab</h1>
+<p>Here are the score points for the technical steps in Part 2:</p>
+<ul>
+<li><p>Create Combined variables (SATTOTAL and ADHDSymptoms) [10 pts]</p></li>
+<li><p>Histograms, boxplots, (interval and ratio scale variables) or barplots (nominal and ordinal variables) for all variables. [10 points]</p></li>
+<li><p>Text summaries which includes information about center, scale and pointers to the figure. [10 pts]</p></li>
+<li><p>Anxiety (or Panic) by Year Comparision (text) [10 pts]</p></li>
+<li><p>Anxiety (or Panic) by Year Comparison (graphs and tables) [10 pts]</p></li>
+<li><p>Year by Group description. [10 pt]</p></li>
+</ul>
+<p>Style accounts for the remaining 40 points.</p>
+<ul>
+<li>Text style [20 pts]
+<ul>
+<li>Pay close attention to sequencing the analyses in a way that makes them easy for the reader to follow.<br>
+</li>
+<li>Make sure that figures and tables have numbers &amp; captions, are referenced in the text and don’t split across pages or get separated from their captions.</li>
+</ul></li>
+<li>Graph and Table Style [20 pts]
+<ul>
+<li>Labels should be human readable, not SPSS variable names.</li>
+<li>Reasonable number of digits.</li>
+<li>Don’t include unnecessary statistics.</li>
+<li>Make sure that the figure or table is part of the story of your paper.</li>
+</ul></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

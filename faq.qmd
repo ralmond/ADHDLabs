@@ -1,3 +1,8 @@
+```
+title: "EDF 5400 Labs:  Frequently Asked Questions"
+```
+
+
 # Frequently Asked Questions (by lab)
 
 ## Lab One
