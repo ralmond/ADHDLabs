@@ -1,4 +1,173 @@
 ---
-title: "EDF 5400 ADHD Labs:  Summary of SPSS commands used.
+title: "EDF 5400 ADHD Labs:  Summary of SPSS commands used."
 ---
 
+# SPSS Command Summary
+
+A cheat sheet for all SPSS commands used in EDF 5400.  
+
+Note that under Windows certain letters in menu items are underlined.
+(SPSS follows this convention in the Windows version.)  These can be
+used to select menu items using the keyboard.  Press and hold the
+`Alt` key and press the key corresponding to the menu (.e.g, `F` for
+File, `V` for view, `I` for Insert, `T` for Transform, `G` for Graphs,
+and `A` for Analyze).  The menu should then flop down, and then you
+can select the item by pressing its underlined letter.  If that menu
+has submenus, you might need to press more letters.
+
+One other interesting detail about the interface is that if a menu
+item ends in three dots (`...`) that means it will open up a dialog
+allowing you to specify details (or cancel).
+
+## Getting Data Into SPSS
+
+### Input and Output
+
+* **[F]{.underline}ile >  [O]{.underline}pen > D[a]{.underline}ta ** [ALT+F O A]
+
+Can both load SPSS `.sav` files and other data formats (`.txt`, `.csv`, `.xls`)
+
+* **[F]{.underline}ile >  [E]{.underline}xport…** [ALT+F E]
+
+Save output in Word, PDF, RTF formats.
+
+You can select those parts of the output you want to export in the right hand side of the output viewer window.
+
+* **[V]{.underline}iew > Variables** [Control+T]
+
+Switch between data and meta-data (variable list) views.  This can also be done using the tabs at the bottom of the window.  On MacOS, the shortcut is [CMD+T] instead of control.
+
+### Annotation
+
+These three commands can be used to add comments and notes to your
+SPSS output.  _Use these:_  the notes are critical for remembering
+what you did at a later time.
+
+* **[I]{.underline}nsert > New  [T]{.underline}itle** [Alt+I T]
+
+* **[I]{.underline}nsert > New Te[x]{.underline}t** [Alt+I X]
+
+* **[I]{.underline}nsert > New P[a]{.underline}ge Title** [Alt+I A]
+
+### Data Manipulation
+
+These commands allow the analyst to recode categorical variables, and combine or rescale other varaibles.
+
+* **[T]{.underline}ransform >  [C]{.underline}ompute Variable...*** [ALT+T C]
+
+Creates new variable according to a formula or rule
+
+* **[T]{.underline}ransform >  [A]{.underline}utomatic Recode…** [ALT+T A]
+
+Recodes strings as numbers (for nominal and ordinal data)
+
+* **[D]{.underline}ata >  [S]{.underline}elect Cases…** [ALT+D S]
+
+Can be used to remove outliers and look at data subsets.   _Don’t forget to turn it off when you are done!_
+
+## Exploratory Data Analysis
+
+### Text Summaries
+
+* **[A]{.underline}nalyze > D[e]{.underline} scriptive Statistics >  [D]{.underline}escriptive...** [Alt+A E D]
+
+Mean, Std., and other basic stats
+
+* **[A]{.underline}nalyze > D[e]{.underline} scriptive Statistics >  [F]{.underline}requencies...** [ALT+A E F]
+
+More basic stats, plus frequency table (often not needed).
+
+### Graphical Displays
+
+* **[G]{.underline}raphs >  [L]{.underline}egacy Dialogs > Bo[x]{.underline} plot...** [ALT+G L X]
+
+* **[G]{.underline}raphs >  [L]{.underline}egacy Dialogs >  [S]{.underline}catter/Dot...** [ALT+ G L S]
+
+Note this can be used for one variable at a time (dot plot), two variables (scatterplot) or three or more variables (scatterplot matrix).
+
+* **[G]{.underline}raphs >  [L]{.underline}egacy Dialogs > H[i]{.underline}stogram...** [ALT+G L I]
+
+Basic exploratory graphics tools
+
+### Distributional Shape
+
+* **[G]{.underline}raphs >  [L]{.underline}egacy Dialogs > H[i]{.underline}stogram...** [ALT+G L I]
+
+Can add normal (or other distribution) reference curve
+
+* **[G]{.underline}raphs >  [L]{.underline}egacy Dialogs > Bo[x]{.underline} plot...** [ALT+G L X] 
+
+* **[A]{.underline}nalyze > D[e]{.underline}scriptive Statistics >  [Q]{.underline}-Q Plots…** [ALT+A E Q]
+
+This compares quantiles of observed distribution to quantiles of a reference distribution (usually normal).  Straight line indicates good fit.
+
+(This is a useful tool for evaluating model fit, which there is not quite enough time to cover in EDF5400.  There is an optional lecture on the canvas site.
+
+## Correlation and Regression
+
+* **[G]{.underline}raphs >  [L]{.underline}egacy Dialogs >  [S]{.underline}catter/Dot…** [ALT+G L S]
+
+* **[A]{.underline}nalyze >  [C]{.underline}orrelate >  [B]{.underline}ivariate…** [ALT+A C B]
+
+* **[A]{.underline}nalyze >  [R]{.underline}egression >  [L]{.underline}inear…** [ALT+A R L]
+
+
+## Comparing Groups
+
+### Summary Statistics and Graphs
+
+* **[A]{.underline}nalyze > Compare  [M]{.underline}eans >  [M]{.underline}eans…** [ALT+A M M]
+
+Tables by mean and variance
+
+* **[G]{.underline}raphs >  [L]{.underline}egacy Dialogs > Bo[x]{.underline}plot...** [ALT+G L X]
+
+Really good for comparing groups
+
+* **[G]{.underline}raphs >  [L]{.underline}egacy Dialogs > H[i]{.underline}stogram...** [ALT+G L I]
+
+Use “Panel by rows” to compare groups
+
+### Compare Groups:  Tests
+
+* **[A]{.underline}nalyze > Co[m]{.underline}pare Means > Independen[t]{.underline}-Sample T-Test…** [ALT+A M T]
+
+Compare two groups
+
+* **[A]{.underline}nalyze > Co[m]{.underline}pare Means > One  [S]{.underline}ample T Test…** [ALT+A M S]
+
+Compare group to 0 or historic value
+
+* **[A]{.underline}nalyze > Co[m]{.underline} pare Means >  [P]{.underline}aired-Samples T Test…** [ALT+A M P]
+
+Comparison pairs of matched individuals (often before/after comparisons)
+
+### Effect size Calculators
+
+These were necessary in older versions of
+  SPSS which did not have Cohen's $d$ as part of the output.
+  * [effectSize_d.xls](http://pluto.coe.fsu.edu/effectSize_d.xls)
+    (Excel format)
+  * [Effect Size Web Gadget](http://pluto.coe.fsu.edu/rdemos/IntroStats/EffectSize.Rmd)
+
+## Categorical Data
+
+### One-variable tests
+
+* **[A]{.underline}nalyze > D[e]{.underline} scriptive Statistics >  [F]{.underline}requencies…** [ALT+A D F]
+
+* **[G]{.underline}raphs >  [L]{.underline}egacy Dialogs >  [B]{.underline}ar…** [ALT+G L B]
+
+* **[G]{.underline}raphs >  [L]{.underline}egacy Dialogs > Pi[e]{.underline}…**  [ALT+G L E]
+
+* **[A]{.underline}nalyze >  [N]{.underline}onparametric Tests >  [L]{.underline}egacy Dialogs >  [C]{.underline}hi-square…** [ALT+A N L C]
+
+Compares observed counts to reference distribution (usually uniform).  One-way chisquare test.
+
+### 2-way tests (Crosstabs)
+
+* **[A]{.underline}nalyze > D[e]{.underline}scriptive Statistics >  [C]{.underline}rosstabs…** [ALT+A D C]
+
+Chi-square test of independence (also other tests, not used in EDF 5400 but useful in other contexts)
+
+Usually will want to select row or column percentages, but not both.

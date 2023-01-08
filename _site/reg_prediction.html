@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>EDF 5400 ADHD Lab instructions and Rubrics - EDF 5400 ADHD Labs: Regression Prediction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./img/fsu-seal-3d-1.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_dataEntry.html">
+ <span class="menu-text">Part 1: Data Cleaning</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_EDA.html">
+ <span class="menu-text">Part 2: EDA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_ttest.html">
+ <span class="menu-text">Part 3: t-test</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_regression.html">
+ <span class="menu-text">Part 4: Regression</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab_final_report.html">
+ <span class="menu-text">Final Report</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data_library.html">
+ <span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./equ_abrev.html">
+ <span class="menu-text">Notation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./style.html">
+ <span class="menu-text">Style Guide</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./SPSS_commands.html">
+ <span class="menu-text">SPSS Command Reference</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./faq.html">
+ <span class="menu-text">F.A.Q.</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./reg_prediction.html" aria-current="page">
+ <span class="menu-text">Prediction (Extra)</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#predicting-future-observations" id="toc-predicting-future-observations" class="nav-link active" data-scroll-target="#predicting-future-observations">Predicting Future Observations</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">EDF 5400 ADHD Labs: Regression Prediction</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>This material is optional as it is no longer required, but still may be interesting.</p>
+<section id="predicting-future-observations" class="level3">
+<h3 class="anchored" data-anchor-id="predicting-future-observations">Predicting Future Observations</h3>
+<!-- Removed this from L3 to reduce workload. Idea is to polish this body of text into it's own optional section. -->
+<p>The last part of the lab requires you to assess how well the model predicts the general anxiety scores from the hyperactive impulse scores. To do this, you will need to save predicted values in the regression dialog. There are several different varieties of predicted values, but the best one for our purposes is the “Adjusted” predictions. These refit the model without each value in turn and then use that model to predict the data point that was left out. For example, the prediction for <em>617</em> is made using all of the data points except <em>617</em> in fitting the regression line.</p>
+<p>One of the fundamental rules of statistics is that we should always be honest about how much we know and how much we don’t know. Thus, along with our prediction, we should say something about the accuracy of our prediction. Statisticians usually do this by producing an interval estimate. They pick a probability (usually 95%) and produce an interval that should contain the actual value with that probability.[^4]</p>
+<p>SPSS will calculate both the predicted value and a prediction interval; however, it offers a choice of two different prediction intervals. This is because there are two sources of prediction errors. Suppose we were interested in the mean anxiety score for students who scored exactly 12 on the hyperactivity impulse scale. Our prediction would be the point on the regression line corresponding to <em>X</em> = 12. However, there is some sampling error in the slope and the intercept, so we have a confidence interval around where the point should be. This is the “mean” type prediction interval produced by SPSS.</p>
+<p>If we are interested in a particular student with that score, then we also need to consider the fact that most data points don’t lie exactly on the line. The residual variance gives us the amount of additional error we need to add to our intervals. The “individual” style intervals in SPSS add this extra variance. These are the ones that we want.</p>
+<!-- ![](media/image1.png){width="4.697916666666667in" height="7.166666666666667in"} -->
+<p><em>Figure 1. SPSS Regression Save… dialog with best choices for this lab.</em></p>
+<p>If you set up the “Save…” dialog in SPSS on our regression as shown in Figure 1, you should get the following four new variables in your data view:</p>
+<ul>
+<li><p>PRE_1 – this is the exact value (on the transformed scale if you transformed the outcome) predicted by the line.</p></li>
+<li><p>RES_1 – this is the residual (difference from the predicted value) for each school.</p></li>
+<li><p>LCI_1 – lower prediction (confidence) interval for each state. This is the lower bound on our uncertainty about the prediction.</p></li>
+<li><p>UCI_1 – upper prediction (confidence) interval for each state. This is the upper bound on our uncertainty about the prediction.</p></li>
+</ul>
+<p>Each time you run the regression using the “Save…” option, you will get a new set of residuals and predicted values. SPSS will increment the number so “_1” is from the first regression model, “_2” is from the second and so on. You probably will want to name the saved variables IMMEDIATELY after you run each model, or soon you will forget what all of the saved items are!! Once you have done that, getting the prediction for a particular student is simple. Just scroll down in the data until you get to that student's row and look across for the PRE_k (or ADJ_k) column (point prediction) and LCI_k and UCI_k columns (lower and upper bounds for confidence interval).</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

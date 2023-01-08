@@ -1,32 +1,42 @@
 project:
   type: website
 
+
+theme: 
+  - FSU.scss
+
 website:
   title: "EDF 5400 ADHD Lab instructions and Rubrics"
   navbar:
+    background: primary
+    foreground: secondary
+    title: false
+    logo: img/fsu-seal-3d-1.png
     left:
       - href: index.qmd
         text: Home
       - href: lab_dataEntry.qmd
-        text: Part 1: Data Cleaning
+        text: "Part 1: Data Cleaning"
       - href: lab_EDA.qmd
-        text: Part 2:  EDA
+        text: "Part 2:  EDA"
       - href: lab_ttest.qmd
-        text: Part 3: t-test
+        text: "Part 3: t-test"
       - href: lab_regression.qmd
-        text: Part 4: Regression
+        text: "Part 4: Regression"
       - href: lab_final_report.qmd
-        text: Final Report
+        text: "Final Report"
       - href: data_library.qmd
         text: Data
       - href: equ_abrev.qmd
         text: Notation
       - href: style.qmd
-        text: Style Guide
+        text: "Style Guide"
       - href: SPSS_commands.qmd
-        text: SPSS Command Reference
+        text: "SPSS Command Reference"
+      - href: faq.qmd
+        text: "F.A.Q."
       - href: reg_prediction.qmd
-        text: Prediction (Extra)
+        text: "Prediction (Extra)"
       
 
 format:

@@ -1,5 +1,5 @@
 ---
-title: "EDF 5400 ADHD Labs:  Regression Prediction
+title: "EDF 5400 ADHD Labs:  Regression Prediction"
 ---
 
 This material is optional as it is no longer required, but still may

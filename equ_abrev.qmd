@@ -1,5 +1,5 @@
 ---
-title: "EDF 5400 ADHD Labs:  Summary of Notation and Glossary
+title: "EDF 5400 ADHD Labs:  Summary of Notation and Glossary"
 ---
 
 # Equations and Abbreviations

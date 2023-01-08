@@ -1,12 +1,13 @@
 ---
-title: "EDF 5400 ADHD Labs, Home page "
+title: "EDF 5400 ADHD Labs, Home page"
+
 ---
 
 # Preface {.unnumbered}
 
 ## Introduction to the Labs
 
-In the course of four labs, you (working in groups of up to 3 people) are going to write a short paper addressing a question about attention deficit hyperactivity disorder (ADHD) and anxiety. This will use data collected by Prevat, Dehili, Taylor and Marshal (2015) and will replicate some of their results.
+In the course of four labs, you (working in groups of up to 3 people) are going to write a short paper addressing a question about attention deficit hyperactivity disorder (ADHD) and anxiety. This will use data collected by @prevatt15 and will replicate some of their results.
 
 To make this task somewhat more manageable, we will split writing the paper into four parts:
 
@@ -31,3 +32,18 @@ Writing about data will also help you gain greater depth in your statistical voc
 In addition to the rules for text, there are rules for figures (plots and graphs) and tables. Each should be given a caption which tells something about it. The rows and columns of the table and the axis of the graph should be human readable names and not the abbreviations often used for variable names in stat packages. You should use the right number of significant digits: too many or two few obscures the relationships you are trying to describe.
 
 The grading for the final report will be split with 60% for doing the correct analysis and 40% for having good academic style. I am somewhat flexible here, I don't insist on exact APA style, but it should be close enough (in particular, if your discipline uses a different style, that is fine). But it is important that everything is clear.
+
+## Using SPSS
+
+This version of the lab handout assumes that you are using `SPSS` to do the computing. I don't actually care which statistics package you use. I will try to write alternative instructions for using the free `R` statistics package; however, you already know `Stata` or want to write your own code in `python`, more power to you. I will probably only be able to give you general advice.
+
+SPSS is menu driven, so is somewhat easier to learn than R (which uses command scripts). SPSS is available in 3 ways:
+
+-   The Learning Resource Center (LRC) computer labs in Stone and Tully have a number of computers with SPSS loaded. These can be used unless a class has scheduled the lab. Bring a usb drive to save your files, as these computers are set to erase all of your files when you log out. There is usually somebody at the desk in the LRC who can help with problems logging in and starting SPSS (they may or may not be able to answer SPSS questions).
+
+-   FSU has a virtual computer lab at <https://its.fsu.edu/service-catalog/desktop-and-mobile-computing/its-software/myfsuvlab> (Press the Sign-In button to start). This is supported by the university ITS (The help link is on the same page). If you are having difficulty getting the virtual lab to run on you computer: (1) try a different browser (e.g., chrome instead of firefox) and (2) contact the ITS help line.
+
+-   You could purchase your own version of SPSS (or you might have access on another machine though your work). Note that SPSS licenses are time limited, so this is a rather expensive option.
+
+In general, doing your computing in person in the LRC will be easier than working remotely through the virtual lab. The latter is sometimes glitchy and performance will depend on how fast your internet connection is. However, I can put up with a fair amount of lag to avoid driving into campus.
+
