@@ -11,7 +11,7 @@ website:
     background: primary
     foreground: secondary
     title: false
-    logo: img/fsu-seal-3d-1.png
+    logo: img/SM-White.svg
     left:
       - href: index.qmd
         text: Home
