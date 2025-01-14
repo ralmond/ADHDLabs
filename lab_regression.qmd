@@ -18,7 +18,7 @@ To answer our research question we'll need to answer the following questions in 
 
 3.  Is there any reason to believe that the regression is different for students from different years?
 
-4. Do the graduate students impact the correlation (or slope of the regression line)?
+4.  Do the graduate students impact the correlation (or slope of the regression line)?
 
 ## The Data
 
