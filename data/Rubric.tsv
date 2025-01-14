@@ -1,0 +1,47 @@
+Part	Title	General	Specific
+0	Part 1 -- Description	***************************************************	***********************************************************
+1	Introduction	Is there an introduction and does it properly motivate the paper.	Introduction can be a summary of Prevatt et al. Must cite Prevatt et al., 
+1	Research Questions	Are the research questions stated clearly? Do they reference the right population and variables? Are they scientific and not statistical questions?, Are the research questions stated clearly? 	Do they reference the right population and variables?  Are they only the ones used in this reanalysis?
+1	Sample Description	Is the method or recruitment, selection, inclusion/exclusion criteria described? Is the assignment of treatment groups properly described?	Must cite Prevatt et al. Must note non-random selection. Must note different sampling procedures for ADHD and Reference groups.
+1	Measures Section	Is how the measure was collected and it scale properly described?	Must describe min/max values for measures. Should include Anxiety, Panic and Hyperactivity and Innattentiveness measures. Should not include measures not used in secondary analysis.
+1	Data Description	For discrete (nominal/ordinal) variables, are the groups clearly defined? Is the distribution of the groups in the sample defined? For continuous (interval/ratio scale) variables, are the mins and maxes given.	Percentage distributions for Gender, Year & Race. Barplot/Pie chart for Year & Race
+1	Data Cleaning	Have the missing value codes be properly marked? Are out-of-range values marked as missing?  Do categorical variables have non-code labels?	Out of range values marked as missing: SAT=0, Anxiety > 6, Panic >5, Innat, Hyper >27.
+0	Part 2 -- Exploratory Data Analysis	***************************************************	***********************************************************
+2	Distribution description for all variables	For discrete variables, the percentages should be given. For continuous variable, the center, spread and shape should be discussed. Also, any important patterns of missingness should be discussed.	Should include Year, Gender, Anxiety/Panic, and ADHD symptom variables.
+2	Histograms or Boxplots for All Variables	Are histograms or boxplots provided for all of the required variables.  Note, for full credit figures should be referenced in texts.	Age, Anxiety, Panic, Innatentive, Hyperactive.  
+2	Create Combined Variables	Are the required derieved variables properly created and their distribution described?	ADHD Total = Inatt + Hyper
+2	Anxiety (Panic) by Year Comparison	Differences across school years on the chosen variable clearly described (mentions differences in center scale and shape) and supported with graph.	Boxplot or Histogram using Year as grouping variable, as well as statistics per group in table or text.
+2	Anxiety (Panic) by Year Graphic	Graph or table comparing the distributions of anxiety/panic by Year.	Stacked histograms or multiple boxplots on same axis. 
+2	Cross-Tabs	Give a table of the treatment variable by a covariate.	Control/ADHD versus Year.
+0	Part 3 -- t-test	*****************************************************	*****************************************************
+3	C.I. for reference group Anxiety (Panic)	A 95% confidence interval produced for the outcome variable (Anxiety or Panic) in the control group only.	This should be a C.I. and control group only.
+3	Reference Group Distribution Graph	A graph for the distribution of the outcome variable in the control group.	Boxplot or histogram for just control group.
+3	Outcome by Treatement Graph	A comparision graph (boxplot or histogram) for the outcome variable broken down by treatement groups.	Outcome is Anxiety or Panic (student choice).  Boxplot or histograms for control and ADHD groups on same graph. t-test for outcome variable by treatment group.
+3	t-Test	A t-test for the effect of the group on the outcome variable with t-statistic, d.f., p-value (or critical value) and effect size. T-tests summarized in APA style.  	Outcome variable is one of the Anxiety or Panic variables (student choice). Treatment variable is ADHD/Control.
+3	Effect Sizes and Interpretatoins	Effect sizes reported and interpretation/conclusions consistent with the t-value and d-value. Proper interpretation for t-test.  	Need to interpret what this means.
+3	Sensitivity Analysis	A second analysis run for t-test without graduate students to judge sensitivity to the target group. This should both be performed and discussed as a sensitivity analysis, not an independent test.  	Analysis with/without graduate students should compare mean differences or effect sizes.
+0	Part 4 -- Regression	******************************************************	******************************************************
+4	Scatterplots	Are there scatterplots for relationship between the dependent variables (hyper, inatt & combined) and the independent variable (Anxiety or Panic)	Three scatterplots, with chosen response variable as Y and innat, hyper and ADHD total as X. Should include line.
+4	Linearity Check	For each regression, does the paper check that the relationship is linear, and not non-linear. Note that no relationship, is not the same as non-linear.	Linearity should be discussed and point to scatterplot as evidence. Any resonable conclustions is acceptable.  Including lowess curves on scatterplots is good.
+4	Equation of Line	Is the equation of the line presented and are X and Y identified.	Three equations, one for each X variable.
+4	Correlation	Is the correlation (r or R-squared) given and interpreted for each relationship.	Three Correlations or R-squared values.
+4	By Group Scatterplots	Are the groups identified by using colors/symbols on the scatterplot. Is whether or not the relationship is similar across groups.	This only needs to be done for one of the three X values. Using only colors is a style issue, not a correctness one. Discussion should point to figure.
+4	Regression ANOVA	Is the ANOVA or Regression t-test presented, and interpreted.  	Should present ANOVA test for relationship or t-test for slopes in APA style. Students will not be able to do this until Unit 18.
+0	Text Style	*******************************************************	*******************************************************	
+T	Research Paper	Does the paper read like a research paper? Will it be be clear to an intelligent reader with no background in the subject?
+T	APA Style	Does is roughly follow APA outline and style guides? Is the writing in academic style?
+T	Structure	Are proper section headings.  Do all paragraphs hang together.
+T	Consistent Labeling	Are there no ambiguous noun or pronoun references?  Are all variables (e.g., X, Y) defined.  Ar all abbreviations written out.  Are figures and tables numbered consistently.
+T	Statistical Language	Are statistical terms like "significance", "independence" and "correlation" used correctly.  Are the limitations of the expressions properly expressed.
+T	Concision	Is the language not excessively wordy, with many unnecessary transitions or multiple qualifications.
+T	All claims supported	All claims made in the text are justified with data or references.	Don't just tell me "this is important", tell my why it is important.
+T	Other text issues.	See "Feedback" tab of https://docs.google.com/spreadsheets/d/1OmW9VpnRmmTf6w5-taiPltdrKv_kVhe6PPOo1BDipDI/edit?usp=sharing
+0	Figure/Table Style	*******************************************************	*******************************************************	
+G	Figures and Tables referenced in the text	Figures and tables should be numbered, captioned and mentioned in the text.
+G	Presentaiton Graphics	Are the graphs and tables of presentation quality?	Tables should not have heavy lines between entries, preferably APA style.
+G	Axes and Table Labels.	Labels should be full lables, not abbreviated SPSS variable names
+G	Choice of graphs	Are the appropriately chosen? Are they referenced in the text?	Don't dump SPSS tables into the document without thinking
+G	Choice of statistics	Do they contain appropriate material, or are there extraneous data included? Can they be understood with minimal reference to the text? 
+G	Digits	Are there appropriate numbers of digits for values in the text and the tables.	Most variables in this data set are integer valued, so 
+G	Accessability	Will figures and tables be usable in black and white printing.	Use symbols and not just shapes for groups in scatterplots.
+G	Other graphical issues.	See "Feedback" tab of https://docs.google.com/spreadsheets/d/1OmW9VpnRmmTf6w5-taiPltdrKv_kVhe6PPOo1BDipDI/edit?usp=sharing

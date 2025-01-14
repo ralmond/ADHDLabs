@@ -1,0 +1,62 @@
+---
+title: "Rubric"
+---
+
+```{r, echo=FALSE, message= FALSE}
+library(kableExtra)
+library(tidyverse)
+```
+
+## Correctness
+
+These are grouped by the part in which the are introduced.
+
+```{r,echo=FALSE}
+rubric <- read.csv("data/Rubric.tsv",sep="\t")
+partnames <- rubric[rubric$Part=="0","Title"]
+filter(rubric,Part %in% paste(1:4)) |>
+  select(all_of(c("Title","General","Specific"))) |>
+  kbl() |>
+  kable_styling(bootstrap_options = c("striped","hover"),
+                fixed_thead = FALSE) |>
+  column_spec(1, italic=TRUE) |>
+  column_spec(2, width = "30cm") |>
+  column_spec(3, width = "25cm") |>
+  pack_rows(partnames[1],1,6,
+            label_row_css = "background-color:  #782F40; color: #CEB888;") |>
+  pack_rows(partnames[2],7,12,
+            label_row_css = "background-color:  #782F40; color: #CEB888;") |>
+  pack_rows(partnames[3],13,18,
+            label_row_css = "background-color:  #782F40; color: #CEB888;") |>
+  pack_rows(partnames[4],19,24,
+            label_row_css = "background-color:  #782F40; color: #CEB888;")
+  # pack_rows(partnames[5],25,30,
+  #           label_row_css = "background-color:  #782F40; color: #CEB888;") |>
+  # pack_rows(partnames[6],31,36,
+  #           label_row_css = "background-color:  #782F40; color: #CEB888;")
+  
+  
+```
+
+
+## Style
+
+These apply to all of the parts.
+
+```{r}
+filter(rubric,Part %in% c("T","G")) |>
+  select(all_of(c("Title","General","Specific"))) |>
+  kbl() |>
+  kable_styling(bootstrap_options = c("striped","hover"),
+                fixed_thead = FALSE) |>
+  column_spec(1, italic=TRUE) |>
+  column_spec(2, width = "30cm") |>
+  column_spec(3, width = "25cm") |>
+  pack_rows(partnames[5],1,8,
+           label_row_css = "background-color:  #782F40; color: #CEB888;") |>
+  pack_rows(partnames[6],9,16,
+           label_row_css = "background-color:  #782F40; color: #CEB888;")
+  
+```
+
+This [google sheet](https://docs.google.com/spreadsheets/d/1OmW9VpnRmmTf6w5-taiPltdrKv_kVhe6PPOo1BDipDI/edit?usp=sharing) contains some notes about other style features I have noted in the past.

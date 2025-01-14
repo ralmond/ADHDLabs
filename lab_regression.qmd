@@ -2,6 +2,13 @@
 title: "EDF 5400 ADHD Labs:  Part 4: Regression "
 ---
 
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(kableExtra)
+```
+
+
+
 # Lab Four: Regression
 
 At the end of this lab you should be able to perform a simple linear regression, including diagnostics and making predictions. The question we're exploring in this lab is:
@@ -220,3 +227,26 @@ Your write up should be no more than 2 -- 4 double spaced pages (PLUS your table
 -   *Conclusions* -- Recap the most important results and relate them back to the real world. What was the answer to your research question? Are there any limitations of the way the data were collected or the analysis that would affect the ability to generalize beyond your sample? In particular, to which population does it apply (all students or ADHD students only).
 
 As before you may place figures or tables either interspersed in the text or at the end of the document. **Remember each figure and table should have a number, a caption (a clear description of what is in there) and should be referenced somewhere in the text. Many teams did not do this on the first drafts of Lab 1!!** If you don't have anything to say about it, why include it? *Failure to follow these guidelines will result in lost style points*.
+
+## Rubric
+
+```{r,echo=FALSE}
+rubric <- read.csv("data/Rubric.tsv",sep="\t")
+partnames <- rubric[rubric$Part=="0","Title"]
+filter(rubric,Part %in% c("4","T","G")) |>
+  select(all_of(c("Title","General","Specific"))) |>
+  kbl() |>
+  kable_styling(bootstrap_options = c("striped","hover"),
+                fixed_thead = FALSE) |>
+  column_spec(1, italic=TRUE) |>
+  column_spec(2, width = "30cm") |>
+  column_spec(3, width = "25cm") |>
+  pack_rows(partnames[4],1,6,
+            label_row_css = "background-color:  #782F40; color: #CEB888;") |>
+  pack_rows(partnames[5],7,14,
+            label_row_css = "background-color:  #782F40; color: #CEB888;") |>
+  pack_rows(partnames[6],15,22,
+            label_row_css = "background-color:  #782F40; color: #CEB888;")
+  
+  
+```

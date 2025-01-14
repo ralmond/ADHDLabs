@@ -2,18 +2,23 @@
 title: "EDF 5400 ADHD Labs:  Part 1:  Data Entry and Cleaning "
 ---
 
+```{r echo=FALSE, message=FALSE}
+library(tidyverse)
+library(kableExtra)
+```
+
 
 # Lab One: Data Entry
 
 # The Data
 
-The data were gathered by @prevatt15. The first step should probably be to read that paper. Pay particular attention to (1) who is in the sample, and how the sample was recruited, and (2) what are the measures and how were they collected. These are vitally important questions because they affect the validity of any conclusion and the extent to which the conclusions can be generalized to a different audience. You will need to summarize these parts of the research in your paper, so take careful notes here. 
+The data were gathered by @prevatt15. The first step should probably be to read that paper. Pay particular attention to (1) who is in the sample, and how the sample was recruited, and (2) what are the measures and how were they collected. These are vitally important questions because they affect the validity of any conclusion and the extent to which the conclusions can be generalized to a different audience. You will need to summarize these parts of the research in your paper, so take careful notes here.
 
 Next, take a look at the data, in the file [Alec-5400Subset.csv](data_library.qmd). (You will need to download this from Canvas, page name "ALEC data set"; put it somewhere where you can easily find it, many web browsers default to your `Downloads` folder.) This is in the common comma separated value (CSV) format. Each line represents a case and the values for the variables are separated by commas. These files usually have a `.csv` extension. (Another common format is tab separated data, which often has a `.dat` or `.txt` extension).
 
 Here are the first few lines of the data:
 
-```
+```         
     group,YEAR,AGE,GENDER,ETHNICITY,SAT,SATVERBAL,SATQUANT,SATWRIT,GADD,PAG,genanxa,paa,inatt,hyper
     2,2,19,2,1,-9,-9,-9,-9,1,0,4,1,-9,-9
     2,2,20,2,2,-9,-9,-9,-9,1,0,0,0,-9,-9
@@ -110,7 +115,7 @@ Depending on the analysis, you may want to treat those differently (although at 
 
 To check that we have properly accounted for the missing values, calculate some summaries of the data.
 
-To do this, select [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [D]{.underline}escriptive\...* \[Note that the underlined letters are keyboard shortcuts, so you can also type `Alt+A E D`, holding the alt key down to select the A, and then the other letters\].
+To do this, select [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [D]{.underline}escriptive...* \[Note that the underlined letters are keyboard shortcuts, so you can also type `Alt+A E D`, holding the alt key down to select the A, and then the other letters\].
 
 The descriptives dialog asks which variables you want to describe. Select them all and then press the arrow key to move them into the "Variable(s)" column.
 
@@ -137,7 +142,7 @@ Consider the SAT data. A number of people have an SAT of 0, which is not a score
 
 Now check the other variables carefully against the codebook. There are a couple of other data entry problems in these data. Make sure you clean them up before you go on.
 
-For the nominal and ordinal values, you will want to use a slightly different command. Use [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [F]{.underline}requencies\...*. This time, select only the nominal and ordinal variables (these will have the three circles or three bars icons). You also want APA style tables. The dialog should look like this:
+For the nominal and ordinal values, you will want to use a slightly different command. Use [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [F]{.underline}requencies...*. This time, select only the nominal and ordinal variables (these will have the three circles or three bars icons). You also want APA style tables. The dialog should look like this:
 
 ![Frequency Selection](img/Frequencies.png)
 
@@ -186,17 +191,26 @@ Begin writing the paper. Write it as if you were going to submit it to a journal
 
 Note, the points in the rubric refer to the final paper and not the draft, which will be scored 0 (not submitted) or 1 (submitted). However, this section of the lab will be worth 100 points.
 
--   Introduction (10 pts)
--   Research Question (10 pts)
--   Data Description (10 pts)
--   Measures Section (10 pts)
--   Data Description Nominal/Ordinal (10 pts)
--   Data Description Scale (This will be Part of Part 2)
--   Out of range values marked as missing (10 pts)
--   Text Style (20 pts)
--   Figure/Table Style (20 pts)
-
+```{r,echo=FALSE}
+rubric <- read.csv("data/Rubric.tsv",sep="\t")
+partnames <- rubric[rubric$Part=="0","Title"]
+filter(rubric,Part %in% c("1","T","G")) |>
+  select(all_of(c("Title","General","Specific"))) |>
+  kbl() |>
+  kable_styling(bootstrap_options = c("striped","hover"),
+                fixed_thead = FALSE) |>
+  column_spec(1, italic=TRUE) |>
+  column_spec(2, width = "30cm") |>
+  column_spec(3, width = "25cm") |>
+  pack_rows(partnames[1],1,6,
+            label_row_css = "background-color:  #782F40; color: #CEB888;") |>
+  pack_rows(partnames[5],7,14,
+            label_row_css = "background-color:  #782F40; color: #CEB888;") |>
+  pack_rows(partnames[6],15,22,
+            label_row_css = "background-color:  #782F40; color: #CEB888;")
+  
+  
+```
 ## References
 
 Prevatt, F., Dehili, V., Taylor, N. & Marshall, D. (2015). Anxiety in College Students with ADHD: Relationship to Cognitive Functioning. *Journal of Attention Disorders*, *19*, 222-230. <doi:10.1177/1087054712457037>
-

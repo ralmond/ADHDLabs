@@ -2,6 +2,12 @@
 title: "EDF 5400 ADHD Labs:  Part 3:  Comparing Means"
 ---
 
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(kableExtra)
+```
+
+
 # Lab Three *t-*test
 
 @prevatt15 were interested in investigating students with attention deficit hyperactivity disorder (ADHD) so that they could teach them strategies to compensate for their difficulties. As sitting for an examination requires sitting quietly for long periods of time (something that persons with ADHD typically have difficulty doing), it would seem to follow that *students with ADHD might be more anxious about tests than students without ADHD* [^1].
@@ -177,3 +183,27 @@ Sometimes, although not with these data, you may need more complicated expressio
 ```
 
 You also have a choice here. You should not report both the full data numbers and the graduate students removed numbers, rather, you should think of one as primary and the other as secondary. Report the results for one, and then describe the difference when you remove (or add back in) the graduate students. However, think about the problem of which group of students to use as the main and which as the secondary analysis and then pick that one.
+
+## Rubric
+
+```{r,echo=FALSE}
+rubric <- read.csv("data/Rubric.tsv",sep="\t")
+partnames <- rubric[rubric$Part=="0","Title"]
+filter(rubric,Part %in% c("3","T","G")) |>
+  select(all_of(c("Title","General","Specific"))) |>
+  kbl() |>
+  kable_styling(bootstrap_options = c("striped","hover"),
+                fixed_thead = FALSE) |>
+  column_spec(1, italic=TRUE) |>
+  column_spec(2, width = "30cm") |>
+  column_spec(3, width = "25cm") |>
+  pack_rows(partnames[3],1,6,
+            label_row_css = "background-color:  #782F40; color: #CEB888;") |>
+  pack_rows(partnames[5],7,14,
+            label_row_css = "background-color:  #782F40; color: #CEB888;") |>
+  pack_rows(partnames[6],15,22,
+            label_row_css = "background-color:  #782F40; color: #CEB888;")
+  
+```
+
+

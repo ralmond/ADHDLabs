@@ -25,6 +25,8 @@ website:
         text: "Part 4: Regression"
       - href: lab_final_report.qmd
         text: "Final Report"
+      - href: Rubric.qmd
+        text: Rubric
       - href: data_library.qmd
         text: Data
       - href: equ_abrev.qmd
