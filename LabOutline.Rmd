@@ -1,0 +1,87 @@
+---
+Title: Secondary Analysis of the relationship between ADHD and Anxiety
+Author: Your name(s) here
+output: word_document
+---
+
+# Introduction
+
+The most important job of this section is to motivate the research question(s).
+
+This does not need to be very long, especially if ADHD is not a thing you normally study.
+
+Do mention that the data come from Prevatt et al.
+
+Don't talk about statistical significance in the introduction. Statistical significance talks about the strength of the evidence from the study towards answering the research question; it is not a goal in and of itself. As a correlary, don't use "significant" for its lay meaning, as that is potential for confusion.
+
+## Background
+
+Talk a little bit about ADHD and Anxiety. If this is not your field, this can be a 1 paragraph summary of Prevatt et al. If this is your field, feel free to add more references.
+
+This is not an important part of the assignment, so a sentence or two is fine.
+
+## Methods
+
+This is a secondary analysis, so cite the source.
+
+### Participants
+
+This is a complex study with the control and ADHD recruited separately, so describe both arms of the study. This is really important as the way the participants are recruited tells you something about the limitations of the study.
+
+### Measures
+
+Describe the ADHD Symptom measures and Anxiety measures you are using. As these are both questionnaires, state how many questions there are an the valid range for possible scores. (Check this, there are some points in the data which are outside the valid range of scores.)
+
+### Sample characteristics [Part 1]
+
+Describe the composition of the ADHD and Control groups. What is the distribution of ages, genders, and year (freshman, sophmore, junior, senior, graduate) for each group. You may use tables or text here.
+
+You also want to check to make sure you don't have any negative values (indication that missing values were not coded properly) or impossibly large values and note patterns of missing data.
+
+## Research Questions
+
+State clearly the two research questions, one about relationship between anxiety and ADHD symptoms and one about the difference in anxiety between ADHD and neurotypical (Control) students. You don't need to worry about the research questions in Prevatt et al. which are not part of this assignment.
+
+Make sure that the question references the population of interest (which is different for both questions).
+
+Don't include the word "significant" in the questions. This is an adjective that describes the strength of the answer the data provide for the question, not the goal of the research.
+
+## Results [Parts 2--4]
+
+### Descriptive Statistics
+
+Describe the distributions of the ADHD Symptoms, Anxiety measures and SAT scores. A description should include:
+
+-   Information about the center (e.g., mean or median)
+-   Information about the spread (e.g., s.d. or IQR)
+-   A graphical display (e.g., histogram or boxplot) [This is often omitted in papers to save space, unless something remarkable--worthy of remark--is going on.]
+-   Information about the distribution's shape: skewed or symmetric, high/low kurtosis, notable outliers (in this case, many of the outliers are out of range values, which indicates a data cleaning issues).
+-   If there are a substantial number of missing values, who is missing and do we know why.
+
+Note that outliers beyond the valid range of the measure (e.g., an SAT score of zero [SAT scores generally go between 200 and 800 for each subject test.]) usually mean some kind of data entry error. Exclude those and re-run the analysis.
+
+Look at anxiety by year, both using tables and graphs (panel by rows). How does the anxiety differ by year? (in location? in spread? in shape?)
+
+Build marginal frequency tables for the categorical variables (Gender, Year, and ADHD/Control). Also build a two-way table with Year by ADHD/Control status. Are there noticible difference between the groups?
+
+### T-Test [Lab 3]
+
+To give some background, produce a 95% confidence interval for the mean anxiety in the control group. (Why just control group? We want to use the neurotypical population as reference.) *Note Bene: We use the t-test command in SPSS to generate the confidence interval, but the t-test comparing the average anxiety to zero is not useful.* After all, only a Buddha has no anxiety.
+
+Compare the anxiety of the ADHD and Control groups. Do this both graphically (boxplots or histograms panneled by group) and numerically ($t$-test). For the $t$-test, report the results in APA style.
+
+Don't include the full SPSS t-tables. There is a lot of information in there which you are not talking about. Generally, Levene's test is not included (unless you want to talk about the difference in SD between the two groups) and only one line of the table is useful. Also, don't report the confidence interval (or other stats) unless you are talking about them.
+
+Look at the sensitivity to graduate students. If the graduates are removed from the sample, how much does the mean difference change?
+
+### Regression [Part 4]
+
+Produce a scatterplot with either a reference line or a smooth curve. Remark on whether or not the relationship between anxiety and ADHD symptoms is linear.
+
+Give the equation of the regression line (if you use variables, make sure they are labeled). Also give the results of an ANOVA-test of the regression model, or a $t$-test of the slope. Use APA-style and include the correlation coefficient or $R^2$ (these are the effect sizes in regression.)
+
+Color (or better yet change both colors and shapes; use the APA style) the years
+
+## Conclusions [Final report.]
+
+Summarize (don't just repeat) the main study findings. Talk about limitations
