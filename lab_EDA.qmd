@@ -14,7 +14,9 @@ library(kableExtra)
 
 Part 1 talked about how to load the data into SPSS and clean it.
 
-I have a slightly larger version of the ACED data set already loaded and cleaned here: [ACED-Subset-New.sav](https://pluto.coe.fsu.edu/svn/common/rgroup-shiny/ADHDLab/ACED-Subset-New.sav)
+You will use the [ADHD data set](data-library.qmd), which is the same one you used for Part 1.
+
+For these examples, I the ACED data set which is already loaded and cleaned here [ACED Data](data/ACED-Subset.sav).
 
 # Exploratory Data Analysis
 
@@ -26,7 +28,7 @@ The other thing we want to mention here is the center and spread. This means eit
 
 It is also important to look at the number of valid (non-missing) observations. If this is substantially different from the total sample size, it can tell the analyst that only a subset of the subjects were measured on some particular variable. In particular, it can add a selection bias to the statistic, making the results harder to generalize.
 
-## Measures of Center
+## Measures of Location (Center)
 
 The two most used measures of center are the `mean` and the `median`.
 
@@ -36,9 +38,9 @@ The two most used measures of center are the `mean` and the `median`.
 
 The `mean` is the efficient choice, that means that if the data are approximately normal, the mean will have the lowest standard error for the given sample size. However, the mean is sensitive to outliers, which are commonly found in distributions with high kurtosis, or strong positive or negative skewness.
 
-The `median` is more robust to departures from normality resistant to outliers, but if the data are approximately normally distributed, the standard error of the median is generally bigger than the standard error of the mean.
+The `median` is more robust to departures from normality and more resistant to outliers, but if the data are approximately normally distributed, the standard error of the median is generally bigger than the standard error of the mean.
 
-The `minimum` and `maximum`, although very useful for data cleaning, are not really useful for describing the location of the data. If there is one or more outliers, chances are it will be the minimum, the maximum or both.
+The `minimum` and `maximum`, although very useful for data cleaning, are not really useful for describing the location of the data. If there is one or more outliers, chances are it will be the minimum, the maximum or both.  Thus, these are not particularly measure of location, but they are useful for checking for outliers.
 
 The `mode` is also not a particularly good measure of center. Technically, if all of the values are unique, then they are all modes, so we haven't reduced the data at all. If there are multiple modes, SPSS just reports the lowest (with a footnote), so real analysts seldom bother with it.
 
@@ -71,17 +73,31 @@ This section will look at generating tables of statistics; there are two command
 
 ## Describe
 
-Select the menu item `Analyze > Descriptive Statistics > Descriptive...` \[Alt+A E D\]; Figure 1 shows the resulting dialog.
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[A]{.underline}nalyze > D[e]{.underline}scriptive Statistics > [D]{.underline}escriptive...` 
+:::
 
-![Descriptives Diaglog](img/Descriptives1.png) Select on the variables in the left hand column and then press the arrow to move them to the right hand side (the variables to be used). By default it shows the labels for the variables (with the names in square brackets), but you can right click on one of the variable names to switch the view to names (or back to labels if it is showing names). Click on the Options button to select statistics; Figure 2 shows the statistic selection dialog.
+The descriptives command brings up the dialog below.  
+
+![Descriptives Diaglog](img/Descriptives1.png) 
+
+Select on the variables in the left hand column and then press the arrow to move them to the right hand side (the variables to be used). By default it shows the labels for the variables (with the names in square brackets), but you can right click on one of the variable names to switch the view to names (or back to labels if it is showing names). Click on the Options button to select statistics; which opens a selection dialog.
 
 ![Descriptives Options](img/DescriptivesOptions.png)
 
 ## Frequencies
 
-The command `Analyze > Descriptive Statistics > Frequencies... [Alt+A E F]` also produces statistics (although some statistics, like mean, only make sense if the variable is a scale variable, the mean of a nominal variable is undefined). Figure 3 shows the dialog box.
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[A]{.underline}nalyze > D[e]{.underline}scriptive Statistics > [F]{.underline}requencies...` 
+:::
 
-![Frequencies Selection Dialog](img/Frequencies1.png) The `Statistics...` button allows you to select which statistics you want to display; Figure 4 shows that dialog. Note also that `Display frequency tables` is not checked. Unless there are only a few possible values (i.e., it is a nominal or ordinal variable) the resulting table is usually not very interesting.
+The command `Analyze > Descriptive Statistics > Frequencies... [Alt+A E F]` also produces statistics (although some statistics, like mean, only make sense if the variable is a scale variable, the mean of a nominal variable is undefined). This opens a variable selection diaglog.
+
+![Frequencies Selection Dialog](img/Frequencies1.png)
+
+The `Statistics...` button allows you to select which statistics you want to display; which takes place in a new dialog. Note also that `Display frequency tables` is not checked. Unless there are only a few possible values (i.e., it is a nominal or ordinal variable) the resulting table is usually not very interesting.
 
 ![Frequency Statistics Selection](img/FrequenciesStatistics.png)
 
@@ -118,7 +134,10 @@ Most of the commands for building graphs are located in the `Graph > Legacy` men
 
 ## Histograms
 
-`Graphs > Legacy Dialogs > Histogram...` \[Alt+G L I\]
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[G]{.underline}raphs > [L]{.underline}egacy Dialogs > H[i]{.underline}stogram...
+:::
 
 ![Histogram Dialog](img/Histogram.png)
 
@@ -132,9 +151,22 @@ In the graph editor you can edit X and Y axis labels and play with the appearanc
 
 ![Distribution Selection Dialog](img/AddDistribution.png)
 
+You either let SPSS calculate the mean and variance, or you can explicitly enter them.
+
+::: callout-warning
+
+Just because SPSS can put a normal curve on a histogram, it doesn't mean
+that the distribution is normal.  It just means that SPSS can calculate a mean and a standard deviation.  You need to judge how close the normal curve is to the histogram.
+
+:::
+
+
 ## Boxplots
 
-`Graphs > Legacy Dialogs > Boxplot...` \[Alt+G L X\]
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[G]{.underline}raphs > [L]{.underline}egacy Dialogs > Bo[x]{.underline}plot...
+:::
 
 There are two modes in which you can draw boxplots: Each boxplot is a different variable, or each boxplot is a different group of cases. For a whole variable summary, pick variables.
 
@@ -144,13 +176,16 @@ There are two modes in which you can draw boxplots: Each boxplot is a different 
 
 Select the variables you want. The "Case Labels" is optional, it gives you strings for identifying outliers instead of numbers.
 
-Becareful that all of the variables need to be on compatible scales. In this cases, the "Correct" and "Incorrect" scores were out of 63 items, but the ACED score is on a different scale (-1 to 1); so it just doesn't look good.
+Be careful that all of the variables need to be on compatible scales. In this cases, the "Correct" and "Incorrect" scores were out of 63 items, but the ACED score is on a different scale (-1 to 1); so it just doesn't look good.
 
 ![Boxplot Example with fourth variable on a different scale](img/BoxplotExample.png)
 
 ## Barcharts
 
-`Graphs > Legacy Dialogs > Bar...` \[Alt+G L B\]
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[G]{.underline}raphs > [L]{.underline}egacy Dialogs > [B]{.underline}ar...
+:::
 
 There are a number of ways of doing bar charts. You can select them through the "mode selection dialog" that pops up when you select the bar charts menu option. function. (These mostly matter when you are looking at the relationship between two discrete variables.) Simple bar charts are used to summarize a single variable (often counts of cases), and the clustered and stacked look at two variables (usually at least one of which is categorical variables. By selecting "groups of cases", the barplot will focus on the counts in each category.
 
@@ -162,57 +197,35 @@ The icon with the numbers above the bars adds counts to the bars. (It works with
 
 ## Pie Charts
 
-`Graphs > Legacy Dialogs > Pie...` \[Alt+G L E\]
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[G]{.underline}raphs > [L]{.underline}egacy Dialogs > Pi[e]{.underline}stogram...
+:::
 
 -   Angles are harder to judge than lengths, so pie charts are harder to read than bar charts.
     -   3D pie charts add a visual rotation to the angle judgement, makeing them even worse than 2d pie charts.
 -   Pie charts give a better sense of part-of-whole than do bar charts.
 
-# Creating New Variables
-
-SPSS allows you to perform mathematical operations on scale variables (and some logical operations on nominal and ordianl ones) to create new variables.
-
-SPSS allows you to recode nominal and ordinal variables in several ways.
-
-## Compute Variables
-
-Select `Transform > Compute Variable ...` \[Alt+T C\]
-
-![Calculate a gain score by subtracting two scores](img/ComputeVariable.png)
-
-## Recoding Variables
-
-The `Automatic Recode` command will work for simple transformations of nominal variables, particularly translating strings to numbers.
-
-The `Recode into Different Categories...` works for more complex cases, including dropping categories and adding missing values.
-
-### String to Numeric
-
-There are some SPSS commands which prefer numeric values for nominal or ordinal values. Automatic Recode can be used to map strings to numbers.
-
-`Transform > Automatic Recode ...` \[Alt+T A\]
-
-![Automatic Recode](AutomaticRecode.png).
-
-Note that SPSS assigns the numeric labels alphabetically. This is fine when the values are "Male" and "Female" as which one gets 1 and which 2 (in this case Female=1 and Male=2) is arbitrary. This can cause a problem when the natural order is not alphabetical (High=1, Medium=3, Low =2).
-
-### Collapsing Categories
-
-`Transform > Recode into Different Variables...` \[Alt+T R\]
-
-This function allows the analyst to collapse different categories. In the example below, categories 1, 4 and 5 are combined into a single new category 1, and 6, 7 and 8 are renumbered to close the gap.
-
-![Transformation collapsing categories](img/RecodeDifferentExample.png)
 
 # Breakdown by Category
 
-## Cross-tabs
+## Compare Means
 
-`Analyze > Compare Means > Means…` \[Alt+A M M\] or `Analyze > Descriptive Statistics > Crosstabs...` \[Alt+A E C\]
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[A]{.underline}nalyze > Compare [M]{.underline}eans > [M]{.underline}eans...
+:::
 
 The former is good for breaking a scale variable down by a nominal or ordinal one. The latter for breaking down a nominal or ordinal variable by the another nominal or ordinal variable.
 
 ![Compare Means Dialog](img/CompareMeans.png)
+
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[A]{.underline}nalyze > D[e]{.underline}escriptive Statistics > [C]{.underline}rosstabs...
+:::
+
+## Cross-tabs
 
 For the crosstabs, try both rows and columns, which one tells the story better. Also, don't select more than one of "Row percentages", "Column percentages", or "Total percentages", the table just gets too confusing.
 
@@ -226,9 +239,11 @@ Pivoting the table can fix this. (This can be done in SPSS, or in a spreadsheet 
 
 ![Pivot table trays](img/PivotingTrays.png)
 
-## Boxplots and Barplots
-
-`Graphs > Legacy Dialogs > Boxplot...` \[Alt+G L X\]
+## Boxplots by group
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[G]{.underline}raphs > [L]{.underline}egacy Dialogs > Bo[x]{.underline}plot...
+:::
 
 Now select the other mode in the boxplot:
 
@@ -238,13 +253,21 @@ There is a new field "Category Axis" in the dialog, this is where the grouping v
 
 ![Grouped Boxplot dialog](img/boxplotGroups.png)
 
-`Graphs > Legacy Dialogs > Bar...` \[Alt+G L B\]
+## Bar charts by group
+
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[G]{.underline}raphs > [L]{.underline}egacy Dialogs > [B]{.underline}ar...
+:::
 
 Bar charts are similar. When you have two categorical variables, sometimes swapping which one is the main variable and which defines the clusters will make a better plot. Try it both ways to see.
 
-## Paneling by Rows and Columns
+## Stacking Histograms
 
-`Graphs > Legacy Dialogs > Histogram...`\[Alt+G L I\],
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[G]{.underline}raphs > [L]{.underline}egacy Dialogs > H[i]{.underline}stogram...
+:::
 
 Adding a grouping variable to the "Panel by Rows" field in the histogram dialog will produce multiple histograms that share an axis:
 
@@ -345,6 +368,15 @@ The variables in the lab can be grouped into several categories:
   - Create a new variable `ADHDtotal` by adding `inatt` and `hyper`.
   
   -   Note carefully that the sample size for the ADHD measure is much smaller than for the background variables. Why this discrepancy and who is missing?
+
+*Results: Data Description*. Give some basic descriptive statistics for each variable.
+
+    -   For nominal and ordinal variables, give the number of students in each category, as well as the number of missing values. Use the [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [F]{.underline}requencies ...* command for this.
+    -   For scale variables, provide the minimum, maximum, median, mean and standard deviation. Also, note how many missing values there are. Use the [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [D]{.underline}escriptives ...* command for this.
+    -   You might want to put together a table for the scale variables (this is likely harder to do for the nominal and ordinal variables as they have different numbers of categories).
+    -   You don't need to mention whether each variable is ordinal, interval or scale, but obviously, you need to know so you can treat it in the right way.
+
+
 
 1)  Describe how the sample is broken down by "Year". Also, look at the relationship between "Year" and "group". You will want to use a graph or table to support your results.
 

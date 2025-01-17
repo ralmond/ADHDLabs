@@ -49,7 +49,16 @@ The upload icon should appear.
 
 You will then get two file chooser dialogs, the first will let you pick the local file on your computer (`Alec-5400Subset.csv`), the second will ask you where to put it on the remote computer (I would suggest the `Documents` folder). Remember, when working on the remote machine, the SPSS file dialogs refer to files on the remote machine, not the local one.
 
-To read a CSV file, into SPSS version 27 or 28, select `File > Import Data > CSV...` from the menus. (In the documentation for the beta release, IBM gives `File > Import ...`, so they might move this in future versions). This will first open a file picker to let you pick your `.csv` file and then a dialog with a number of options. Check them over to see if you need to change anything, you probably won't. Select `OK` and SPSS will try to read the data file. It will put the results in the spreadsheet like variables view which should now open.
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[F]{.underline}ile \> Import [D]{.underline}ata \> [C]{.underline}SV ...
+:::
+
+::: {.callout-tip}
+The underlined letters are an accessibility feature built into Windows.  By pressing the `Alt` key and the underlined letter, windows will open the menu, keep pressing the underlined letters to select a menu item.  Thus, the command to open SPSS files can be selected with `Alt+F D C`, and you don't need to use the mouse.  The `...` is another interface convention, it means that selecting this menu item will open a diaglog window for further input.
+:::
+
+To read a CSV file, into SPSS version 27 or higher, select `File > Import Data > CSV...` from the menus. (In the documentation for the beta release, IBM gives `File > Import ...`, so they might move this in future versions). This will first open a file picker to let you pick your `.csv` file and then a dialog with a number of options. Check them over to see if you need to change anything, you probably won't. Select `OK` and SPSS will try to read the data file. It will put the results in the spreadsheet like variables view which should now open.
 
 Note that the CSV format is not a standard. Sometimes there are variable names in first line, sometimes not. Sometimes commas, semicolons or tabs are used to delimit values. Sometimes strings are put in single quotes, double quotes or no quotes at all. In Europe, they sometimes use a comma instead of a period for a decimal point. If the data doesn't look right (in particular, if you have extra columns, or values that just look funky), you probably selected the wrong values. Try the import again until you get it right.
 
@@ -59,9 +68,17 @@ You will notice that in SPSS there are two windows you are using. One has your d
 
 You can also add comments to the SPSS output file. This is useful for remembering what you were doing when you pick the file up again after being away from the project for a while. The `Insert` menu gives you a number of ways to add comments into the output.
 
-To practice, select `Insert > New Text`, and copy and paste the Prevatt et al. (2015) reference. That way, if you ever pick up the output again, you will remember what data are analyzed in this file.
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[I]{.underline}nsert > New Te[x]{.underline}t
+:::
 
-## Adding Metadata
+
+To practice, select `Intsert > New Text`, and copy and paste the Prevatt et al. (2015) reference into your output. That way, if you ever pick up the output again, you will remember what data are analyzed in this file.
+
+# Editing the Metadata
+
+_Metadata_ is data about the data.  It can include things such as where it was gathered and when.  But it also includes information about what the variable names mean and what kinds of values they can include.  In SPSS much of this is handled through the "Variables" view of the data editor.
 
 Go back to the data editor window. Notice on the bottom there are two tabs marked `Data` and `Variables`. The *data* view is the typical spreadsheet view of the data: columns are variables and rows are cases. The *variables* view gives you the meta-data: the data about the data. You can use the tabs on the bottom or the shortcut `Ctrl+T` (`Cmd+T` on Mac OS) to switch between the two views.
 
@@ -95,7 +112,9 @@ The data in this sample were gathered over many years. During that time, the pro
 
 Looking at the code book, the value `-9` is used for `NA`. To tell SPSS how missing values are coded, go to the variable view, and click in the column marked `Missing`. Click the button marked `...` and a dialog like the one below should pop up.
 
-![Missing Value Dialog](img/MissingValuesBox.png) Select the discrete missing value and enter -9. Hit `OK` to save. Do this for all of the variables (as they all might have missing values).
+![Missing Value Dialog](img/MissingValuesBox.png) 
+
+Select the discrete missing value and enter -9. Hit `OK` to save. Do this for all of the variables (as they all might have missing values).
 
 Why are there multiple possible values? Because there may be more than one kind of missingness. The National Assessment of Educational Progress (NAEP) has three different missing codes:
 
@@ -113,9 +132,14 @@ Depending on the analysis, you may want to treat those differently (although at 
 
 ## Data Cleaning
 
-To check that we have properly accounted for the missing values, calculate some summaries of the data.
+To check that we have properly accounted for the missing values, calculate some summaries of the data.  The `Descriptive` command does this.
 
-To do this, select [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [D]{.underline}escriptive...* \[Note that the underlined letters are keyboard shortcuts, so you can also type `Alt+A E D`, holding the alt key down to select the A, and then the other letters\].
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[A]{.underline}nalyze \> D[e]{.underline}scriptive Statistics \> [D]{.underline}escriptive...
+:::
+
+
 
 The descriptives dialog asks which variables you want to describe. Select them all and then press the arrow key to move them into the "Variable(s)" column.
 
@@ -142,11 +166,70 @@ Consider the SAT data. A number of people have an SAT of 0, which is not a score
 
 Now check the other variables carefully against the codebook. There are a couple of other data entry problems in these data. Make sure you clean them up before you go on.
 
-For the nominal and ordinal values, you will want to use a slightly different command. Use [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [F]{.underline}requencies...*. This time, select only the nominal and ordinal variables (these will have the three circles or three bars icons). You also want APA style tables. The dialog should look like this:
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[A]{.underline}nalyze \> D[e]{.underline}scriptive Statistics \> [F]{.underline}requencies...
+:::
+
+
+
+For the nominal and ordinal values, you will want to use a slightly different command, "Frequencies" This time, select only the nominal and ordinal variables (these will have the three circles or three bars icons). You also want APA style tables. The dialog should look like this:
 
 ![Frequency Selection](img/Frequencies.png)
 
 When you are finished cleaning the data, save it as an `.sav` file. (If you are on the virtual machine, you will want to copy this down to your local computer). Make sure you stash a copy someplace safe as you will want to get back to them again.
+
+
+## Computing new Variables
+
+There are a number of ways you can compute new varibles in SPSS.  For numeric variables, you can combine them to make new variables with the `Compute Variable` command
+
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[T]{.underline}ransform > [C]{.underline}ompute Variable ...
+:::
+
+This pops up the `Compute Variable` dialog.  To compute a new variable, you need to first supply a name (and possibly a label) for the new variable in the box marked "Target Variable".  Then construct a mathematical expression for computing the new variable, you can select existing variables from the list on the left (select the varaible and then press on the arrow key to move it to the formula), and mathematical functions from the lists on the right.  When you are happy with the expression, press "OK" and a new column should appear in the data view.  
+
+![Calculate a gain score by subtracting two scores](img/ComputeVariable.png)
+
+## Recoding Variables
+
+For nominal and ordinal variables, there are some different functions.
+
+The `Automatic Recode` command will work for simple transformations of nominal variables, particularly translating strings to numbers.
+
+The `Recode into Different Categories...` works for more complex cases, including dropping categories and adding missing values.
+
+### String to Numeric
+
+There are some SPSS commands which prefer numeric values for nominal or ordinal values. Automatic Recode can be used to map strings to numbers.
+
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[T]{.underline}ransform > [A]{.underline}utomatic Recode ...
+:::
+
+This opens up a dialog box.  Select a variable to recode on the left and press the arrow to move it the the right.  Next, create a new name (it should be different from all other variables you already have) and press new name.  You can recode as many variables as you like.  Press "OK" when you are finished.
+
+
+![Automatic Recode](img/AutomaticRecode.png)
+
+
+Note that SPSS assigns the numeric labels alphabetically. This is fine when the values are "Male" and "Female" as which one gets 1 and which 2 (in this case Female=1 and Male=2) is arbitrary. This can cause a problem when the natural order is not alphabetical (High=1, Medium=3, Low =2).
+
+### Collapsing Categories
+
+::: {.callout-note appearance="simple"}
+### SPSS Command
+[T]{.underline}ransform > [R]{.underline}ecode into Different Variables...
+:::
+
+This function allows the analyst to collapse different categories. In the example below, categories 1, 4 and 5 are combined into a single new category 1, and 6, 7 and 8 are renumbered to close the gap.  The box on the right shows how the old codes will be translated into new codes.  To add entries, put the old code on the right and the new code on the left and then press "Add" (you can also change or remove mappings that you don't want).  When you are done, press "OK" and SPSS will create a new data column.
+
+![Transformation collapsing categories](img/RecodeDifferentExample.png)
+
+# Getting output from SPSS back to your usual computere.
 
 Congratulations! You have finished the hardest part of the lab! I'm not kidding. Data entry, data cleaning and data management are the hardest parts of data analysis, and certainly the parts that take up most of the time (it gets even harder if you need to merge data from two different sources; many more ways that the process can go wrong).
 
@@ -156,13 +239,31 @@ After you save the data set, you want to save the contents of the Statistics Vie
 
 So what you want to do is export the statistics viewer content in another format (probably a Microsoft Word doc is the easiest one to deal with, but you can also choose PDF or separate PNG or JPG files for each image). In the Statistics Viewer, right click on `Output` and then select `Export...`.
 
-![Selecting Export](img/Export.png) You could also open a word document and copy and paste the figures and tables you want to keep into that.
+![Selecting Export](img/Export.png) 
 
-*Virtual Lab Users Only* Don't forget that you need to download the file to your local computer. The download button is next to the upload button.
+You could also open a word document and copy and paste the figures and tables you want to keep into that.
 
-*If you are working in the LRC (Stone or Tully)* The LRC computers are set to delete all files when you log out. Make sure you have copied you work to a flash drive, or a share drive, or just email yourself a copy.
+## Printing the variables view
+
+If you want us to check that you have done the data cleaning properties, print out the *Variables* view.  Goto the SPSS data window and select the variables view, and then select `File > Print`.  From the printer list, select a PDF printer, which will then same the output window as a pdf.  If you submit that with your draft, we will check the data cleaning.
+
+## Getting data from a lab computer to your computer.
+
+Chances are you don't have a personal copy of SPSS on your computer, so now you need to get the output files to your personal computer.
+
+### FSU Virtual Lab
+
+Press the 3 circle icon at the top of the screen, and the button with the arrow going down from the cloud to download the files you want.  Select them first on the remote machine and then where you want to put them on your local machine.
+
+The files you leave on the virtual lab will stay around for a while.  It is probably fine to rely on this if you are in a rush and you are coming back later in the week.  I wouldn't leave any data up there that you wouldn't mind using for more than a semester, as they may reset the accounts at any time.
+
+### Lab computers in the LRC (Stone or Tully) or Library
+
+The LRC computers are set to delete all files when you log out. Make sure you have copied you work to a flash drive, or a share drive (e.g., OneDrive or Google Drive), or just email yourself a copy.
 
 # Part 1 of the Paper
+
+
 
 You will write the final paper in four parts. For this first part, you will concentrate on the introduction. You will also do a just a little bit of analysis to check that you were able to import the data into your chosen stat package. This will become the first part of the Final paper, in each other part of the lab, you will add onto this first start.
 
@@ -180,12 +281,6 @@ Begin writing the paper. Write it as if you were going to submit it to a journal
 
 -   *Methods: Measures*. For each of the measures in the data dictionary, give a brief description. In particular, if this based on a questionnaire, how many questions are there and how are they scored (yes-no? 4-point scale?)
 
--   *Results: Data Description*. Give some basic descriptive statistics for each variable.
-
-    -   For nominal and ordinal variables, give the number of students in each category, as well as the number of missing values. Use the [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [F]{.underline}requencies ...* command for this.
-    -   For scale variables, provide the minimum, maximum, median, mean and standard deviation. Also, note how many missing values there are. Use the [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [D]{.underline}escriptives ...* command for this.
-    -   You might want to put together a table for the scale variables (this is likely harder to do for the nominal and ordinal variables as they have different numbers of categories).
-    -   You don't need to mention whether each variable is ordinal, interval or scale, but obviously, you need to know so you can treat it in the right way.
 
 ## Rubric
 
@@ -211,6 +306,8 @@ filter(rubric,Part %in% c("1","T","G")) |>
   
   
 ```
+One extra bit.  If you want to have us check that you have found the missing values and outliers as well as done the labeling, go to variable view and select `File > Print ...` and save the resulting print out and submit it with your draft.  We will let you know if you missed something. 
+
 ## References
 
 Prevatt, F., Dehili, V., Taylor, N. & Marshall, D. (2015). Anxiety in College Students with ADHD: Relationship to Cognitive Functioning. *Journal of Attention Disorders*, *19*, 222-230. <doi:10.1177/1087054712457037>

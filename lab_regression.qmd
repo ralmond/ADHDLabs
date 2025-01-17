@@ -44,8 +44,7 @@ Don't forget that you need to:
 This data set has lots of missing data. Some of the data are missing at random, some of those data are structurally missing. In particular, the control students did not have all of the same measures taken about their performance that the ADHD students did. We can use some descriptive statistical analysis to see who is in our data set. As before, use...
 
 ::: {.callout-note appearance="simple"}
-## SPSS Command
-
+### SPSS Command
 [A]{.underline}nalyze \> Compare [M]{.underline}eans \> [M]{.underline}eans ...
 :::
 
@@ -64,8 +63,7 @@ The SPSS scatterplot, correlation and regression commands will only use complete
 We have already done much of the univariate exploratory analysis of the data in [lab one](lab_dataEntry.qmd). We will now concentrate on the relationship between hyperactive impulsive symptoms (`hyper`) and the general anxiety score (`GADD`). The basic exploratory tool for exploring the relationship between two *continuous* (i.e., interval or ratio) variables is the scatterplot. The command for building a scatterplot is:
 
 ::: {.callout-note appearance="simple"}
-## SPSS Command
-
+### SPSS Command
 [G]{.underline}raphs \> [L]{.underline}egacy Dialogs \> [S]{.underline}catter/Dot...
 :::
 
@@ -141,8 +139,7 @@ This does show a few points at both the upper and lower end of the x-axis are mo
 It does not appear we have to worry too much about confounding variables---based off the data we have---so let's move on to correlations. To calculate the correlations, use:
 
 ::: {.callout-note appearance="simple"}
-## SPSS Command
-
+### SPSS Command
 [A]{.underline}nalyze \> [C]{.underline}orrelate \> [B]{.underline}ivariate...
 :::
 
@@ -161,8 +158,7 @@ Normally, APA style would have us report the *p*-values [^3] and the sample size
 Linear regression in SPSS is done through the menu item
 
 ::: {.callout-note appearance="simple"}
-## SPSS Command
-
+### SPSS Command
 [A]{.underline}nalyze \> [R]{.underline}egression \> [L]{.underline}inear...
 :::
 
