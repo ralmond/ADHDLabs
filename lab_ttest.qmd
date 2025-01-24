@@ -7,7 +7,6 @@ library(tidyverse)
 library(kableExtra)
 ```
 
-
 # Lab Three *t-*test
 
 @prevatt15 were interested in investigating students with attention deficit hyperactivity disorder (ADHD) so that they could teach them strategies to compensate for their difficulties. As sitting for an examination requires sitting quietly for long periods of time (something that persons with ADHD typically have difficulty doing), it would seem to follow that *students with ADHD might be more anxious about tests than students without ADHD*.
@@ -17,7 +16,6 @@ As ADHD is a recognized disability, let me take a few minutes to describe the co
 
 This is most important the first time you reference the group. Thereafter, you can use the shorter form. The key idea is to always recognize that a human being has many interesting attributes and the disability is only one of them. Each person also has a race, ethnicity, gender, beliefs, abilities, knowledge, likes and dislikes. Any one of those things makes up only a small part of a person; they are not defined by it. If you keep this idea in mind as you are writing, you are unlikely to give offense (unless you do so deliberately).
 :::
-
 
 The statement that students with ADHD and who are neurotypical will differ on anxiety or panic measures is a conjecture, so it requires evidence to support it. Obviously, we cannot perform an experiment---not only would it be unethical to artificially give a person ADHD, we don't know how to do it. So, the best that can be done is an observational study. @prevatt15 have access to students with ADHD who are coming to their clinic (this is the treatment group). They also randomly draw a control sample of students who have not been diagnosed with ADHD. They give both the patients and the control students an academic anxiety instrument.
 
@@ -35,7 +33,7 @@ Answering this question relies on two variables present in the question. The fir
 
 ## Data
 
-We'll use the same [ADHD data](data-library.qmd) we used in the first lab. Refer to the first lab handout for instructions on reading the data set in. If you saved your data as an SPSS `.sav` file after the first lab, you can use that instead of reading it in again. If you didn't save your `.sav` file from lab one, then you'll need to download the raw form and clean it again.
+We'll use the same [ADHD data](data_library.qmd) we used in the first lab. Refer to the first lab handout for instructions on reading the data set in. If you saved your data as an SPSS `.sav` file after the first lab, you can use that instead of reading it in again. If you didn't save your `.sav` file from lab one, then you'll need to download the raw form and clean it again.
 
 Don't forget that you need to:
 
@@ -53,6 +51,7 @@ We can use some descriptive statistical analysis to see who is in our data set. 
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
+
 [A]{.underline}nalyze \> Compare [M]{.underline}eans \> [M]{.underline}eans ...
 :::
 
@@ -66,8 +65,7 @@ Note that the SPSS *t-*test commands will only use complete cases---students who
 
 ### Exploratory Analysis
 
-As you are making the comparisons, you will want to support them with graphical summaries of the data.  Think back to the graphical summaries that you made in [Part 2](lab_EDA.qmd).  Can you apply those techniques to compare these distributions.
-
+As you are making the comparisons, you will want to support them with graphical summaries of the data. Think back to the graphical summaries that you made in [Part 2](lab_EDA.qmd). Can you apply those techniques to compare these distributions.
 
 ## Confidence Intervals for the Mean
 
@@ -75,6 +73,7 @@ Let us start with the question of what the average anxiety level is for all stud
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
+
 [A]{.underline}nalyze \> Co[m]{.underline}pare Means \> One [S]{.underline}ample T Test....
 :::
 
@@ -100,6 +99,7 @@ We can now do an independent sample *t*-test to see if the observed difference i
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
+
 [A]{.underline}nalyze \> Co[m]{.underline}pare Means \> Independen[t]{.underline}-Sample T-Test...
 :::
 
@@ -123,23 +123,19 @@ Press OK and the $t$-test results will appear in the output window. It will also
 
 ## Reading the t-table.
 
-The SPSS $t$-table has a lot more information than we need.  The first couple of columns are Levene's test about whether or not the variances (standard deviations) of the two groups are approximately equal.  If they are, you can use the first line of the $t$-table, otherwise you should use the second line which contains a correction for unequal variances.
+The SPSS $t$-table has a lot more information than we need. The first couple of columns are Levene's test about whether or not the variances (standard deviations) of the two groups are approximately equal. If they are, you can use the first line of the $t$-table, otherwise you should use the second line which contains a correction for unequal variances.
 
-However, there is a trick:  _Always use the second line!_  If if the variances are approximately equal, the two lines should be almost the same (the only difference is often a slightly different degrees of freedom).  If the variances are not equal, then the second line is the one you want to use anyway.
+However, there is a trick: *Always use the second line!* If if the variances are approximately equal, the two lines should be almost the same (the only difference is often a slightly different degrees of freedom). If the variances are not equal, then the second line is the one you want to use anyway.
 
-Also, the SPSS $t$-table has way too many statistics in it, as well as way to many digits.  You are much better off pulling the numbers you need out of the table, and reporting the $t$-test results using APA style.  The recommended way to report this is $t(\langle df \rangle) = \langle t \rangle, p = \langle sig \rangle, d = \langle \text{Cohen's } d \rangle$, where the values in angle brackets are read from the table.  
-  * $\langle df \rangle$ is the degrees of freedom.  Round this to one decimal place (or zero if it is large).
-  * $\langle t \rangle$ is the Student's $t$ statistic.  The sign is determined solely by whether the mean of Group 1 or Group 2 is bigger.  If it is negative, then it is usually best to drop the sign and make it clear in the text which group had the larger mean.  If you drop the sign on $t$, make sure you drop the sign on $d$ as well.
-  * $\langle p \rangle$ this is the $p$-value, which SPSS calls "Sig. (two-tailed)".  If you are doing a one-tailed test, then divide this value by 2.  APA style calls for leaving off the leading zero.  By convention if you see any value smaller than .001 (especially 0, as the $p$-value is almost surely not exactly zero), you should write $p<.001$.  You may also write $p<.01$ or $p<.05$ (if those are true).
-  * $\langle d \rangle$ in SPSS 29 and later, there is a Effect Sizes table that has this value (see the next section below).  Note that $t$ and $d$ will always have the same sign, so they should either both be positive or both be negative.
-  
+Also, the SPSS $t$-table has way too many statistics in it, as well as way to many digits. You are much better off pulling the numbers you need out of the table, and reporting the $t$-test results using APA style. The recommended way to report this is $t(\langle df \rangle) = \langle t \rangle, p = \langle sig \rangle, d = \langle \text{Cohen's } d \rangle$, where the values in angle brackets are read from the table.\
+\* $\langle df \rangle$ is the degrees of freedom. Round this to one decimal place (or zero if it is large). \* $\langle t \rangle$ is the Student's $t$ statistic. The sign is determined solely by whether the mean of Group 1 or Group 2 is bigger. If it is negative, then it is usually best to drop the sign and make it clear in the text which group had the larger mean. If you drop the sign on $t$, make sure you drop the sign on $d$ as well. \* $\langle p \rangle$ this is the $p$-value, which SPSS calls "Sig. (two-tailed)". If you are doing a one-tailed test, then divide this value by 2. APA style calls for leaving off the leading zero. By convention if you see any value smaller than .001 (especially 0, as the $p$-value is almost surely not exactly zero), you should write $p<.001$. You may also write $p<.01$ or $p<.05$ (if those are true). \* $\langle d \rangle$ in SPSS 29 and later, there is a Effect Sizes table that has this value (see the next section below). Note that $t$ and $d$ will always have the same sign, so they should either both be positive or both be negative.
 
 ## Effect Size
 
-The effect size we are recommending is Cohen's d.  You can find it in this table, below.
+The effect size we are recommending is Cohen's d. You can find it in this table, below.
 
 ::: callout-tip
-Older versions of SPSS didn't include the effect size table.  Cohen's is the mean difference divided by the standard deviation.  The proper standard deviation is the square root of a weighted average of the variances of the two groups.
+Older versions of SPSS didn't include the effect size table. Cohen's is the mean difference divided by the standard deviation. The proper standard deviation is the square root of a weighted average of the variances of the two groups.
 
 Let $n_{c}$ be the number of subjects in the control group and let $n_{t}$ be the number of subjects in the treatment group. Let $s_{c}$ be the standard deviation of the control group and $s_{t}$ be the standard deviation of the treatment group. We want to weight the variances by the degrees of freedom, that is, the number in the sample minus one. Thus the pooled standard deviation will be:
 
@@ -170,6 +166,7 @@ To test if the graduate students make a difference, we can remove them from our 
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
+
 [D]{.underline}ata \> [S]{.underline}elect Cases...
 :::
 
@@ -197,20 +194,23 @@ You also have a choice here. You should not report both the full data numbers an
 
 # Assignment
 
-Pick one of the Anxiety or Panic measures to use throughout.  It doesn't matter which one you use, as long as you are clear.
+Pick one of the Anxiety or Panic measures to use throughout. It doesn't matter which one you use, as long as you are clear.
 
-1. One.  Make a data set consisting of just the control students, and calculate a confidence interval for one of the Anxiety or Panic measures.
-  - Do make a histogram or other picture to show more about the distribution.
-  - **Don't** report on the $t$-test against the null hypothesis of zero anxiety.  Everybody (except maybe a Buddhist monk who has achieved englightenment) has some anxiety.
-  
-2. Do a $t$-test comparing the ADHD and control groups for your chosen measure.
-  - Do include boxplots or stacked histogram of the data.
-  - Do write the results in APA style.
-  - **Don't** dump the SPSS output into the document; it generally has far too much useless stuff.
-  
-3. Repeat the $t$-test after excluding graduate students.
-  - Do compare the mean difference, $t$-value or $d$-value.
-  - **Don't** talk about the $p$-value or significance; otherwise you would be counting the same data twice.
+1.  One. Make a data set consisting of just the control students, and calculate a confidence interval for one of the Anxiety or Panic measures.
+
+-   Do make a histogram or other picture to show more about the distribution.
+-   **Don't** report on the $t$-test against the null hypothesis of zero anxiety. Everybody (except maybe a Buddhist monk who has achieved englightenment) has some anxiety.
+
+2.  Do a $t$-test comparing the ADHD and control groups for your chosen measure.
+
+-   Do include boxplots or stacked histogram of the data.
+-   Do write the results in APA style.
+-   **Don't** dump the SPSS output into the document; it generally has far too much useless stuff.
+
+3.  Repeat the $t$-test after excluding graduate students.
+
+-   Do compare the mean difference, $t$-value or $d$-value.
+-   **Don't** talk about the $p$-value or significance; otherwise you would be counting the same data twice.
 
 ## Rubric
 
@@ -233,5 +233,3 @@ filter(rubric,Part %in% c("3","T","G")) |>
             label_row_css = "background-color:  #782F40; color: #CEB888;")
   
 ```
-
-

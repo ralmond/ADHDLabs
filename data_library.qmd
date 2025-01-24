@@ -4,9 +4,18 @@ title: "EDF 5400 ADHD Labs:  Data Repository"
 
 # Datasets
 
-Hello world. Why is this not showing correctly
+Here is the data for the Lab.
 
 ## ALEC Data
-[Data (CSV)]('data/ACED-Subset.csv')
 
-[Codebook]('data/Alec-Subset-Codebook.pdf')
+This is the ADHD data from the Alec Lab [@prevatt15]
+
+[Data (CSV)](data/Alec-5400Subset.csv)
+
+[Codebook](data/Alec-5400Subset-Codebook.pdf)
+
+## ACED 
+
+This is a second data set I use in some examples
+
+[ACED CSV](data/ACED-Subset.csv)
