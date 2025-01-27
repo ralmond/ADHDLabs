@@ -141,9 +141,9 @@ Most of the commands for building graphs are located in the `Graph > Legacy` men
 [G]{.underline}raphs \> [L]{.underline}egacy Dialogs \> H[i]{.underline}stogram...
 :::
 
-![Histogram Dialog](img/Histogram.png)
+![Histogram Dialog](img/Histogram1.png)
 
-![Histogram Editor](img/HistogramEditor.png)
+![Histogram Editor](img/HistogramEditor1.png)
 
 In the graph editor you can edit X and Y axis labels and play with the appearance of the graph.
 
@@ -204,10 +204,47 @@ The icon with the numbers above the bars adds counts to the bars. (It works with
 :::
 
 -   Angles are harder to judge than lengths, so pie charts are harder to read than bar charts.
-    -   3D pie charts add a visual rotation to the angle judgement, makeing them even worse than 2d pie charts.
+    -   3D pie charts add a visual rotation to the angle judgement, making them even worse than 2d pie charts.
 -   Pie charts give a better sense of part-of-whole than do bar charts.
 
 # Breakdown by Category
+
+Often we are interested if the distribution of one variable (the dependent or outcome variable) is different for different groups (the independent or explanatory variable).  In this case we will assume the grouping variable is nominal or ordinal.  There are two cases depending on the outcome variable:
+
+* Nominal or Ordinal -- Use a cross-tabulation (crosstab) -- a table of counts of individuals in each pair of categories.
+
+* Scale -- Use `compare means` to get a breakdown of statistics by group.
+
+
+## Cross-tabs
+
+::: {.callout-note appearance="simple"}
+### SPSS Command
+
+[A]{.underline}nalyze \> D[e]{.underline}escriptive Statistics \> [C]{.underline}rosstabs...
+:::
+
+The crosstab compares the distribution of two categorical variables.
+
+![Crosstab Variable Selection](img/CrosstabScreen.png)
+
+Pick one variable for rows (1) and one for columns (2).  The layout may look better one way or the other, so try both ways.
+
+Next, open the Statistics (3) dialog with the button on the left.  This is where you can calculate the chi-square statistic (Unit 19), also some other statistics, like "Lambda" which is used for rater agreement.  We don't need this now, so just leave it blank for now.
+
+![Crosstab Statistics](img/Crosstab-stats.png)
+
+Next, open the Cells dialog (4).  Here you can select whether you want row percentages, column percentages, or total percentages.  (Don't select more than one, as the table is then too confusing.) I recommend using the APA style (which gives row percentages as well as using APA styling for the table).
+
+![Cells Dialog](img/CrossTabLayout.png)
+
+Here is the output for [Academic Level by Study Condition](img/Crosstab.pdf) and here with the reversed axis [Study Condition by Academic Level](img/Crosstab.pdf).  Neither of these two options are good, in particular, SPSS is splitting the table across pages.  So the solution is to pull the table into a work processor and process it manually.
+
+The reason we are looking at this statistic is to check that the distribution of academic levels is approximately the same across all study conditions.  Here not that there there are only 3 honor students in the control condition, while there are more the other conditions.  (That might be bad luck, but it also might be an explanation for why the control students don't perform as well.)
+
+::: {.callout-note}
+We don't expect the proportions to be exactly the name (unless we have used the variable when allocating subjects to treatments).  So how close is "approximately the same".  The chi-square ($\chi^2$) statistic is a measure of the difference between the observed cell counts and the expected (when the two variables are statistically independent) counts.  Unit 19 covers this test.
+:::
 
 ## Compare Means
 
@@ -217,19 +254,11 @@ The icon with the numbers above the bars adds counts to the bars. (It works with
 [A]{.underline}nalyze \> Compare [M]{.underline}eans \> [M]{.underline}eans...
 :::
 
-The former is good for breaking a scale variable down by a nominal or ordinal one. The latter for breaking down a nominal or ordinal variable by the another nominal or ordinal variable.
+For looking at the differences in center and spread in a scale variable by groups defined by a nominal or ordinal variable, use Compare Means.
 
 ![Compare Means Dialog](img/CompareMeans.png)
 
-::: {.callout-note appearance="simple"}
-### SPSS Command
-
-[A]{.underline}nalyze \> D[e]{.underline}escriptive Statistics \> [C]{.underline}rosstabs...
-:::
-
-## Cross-tabs
-
-For the crosstabs, try both rows and columns, which one tells the story better. Also, don't select more than one of "Row percentages", "Column percentages", or "Total percentages", the table just gets too confusing.
+Don't forget to adjust the number of digits from the output.
 
 ## Pivoting Tables
 
@@ -281,11 +310,12 @@ Adding a grouping variable to the "Panel by Rows" field in the histogram dialog 
 
 For histograms paneling by rows in much better than paneling by columns because it lines up the X-axis (it doesn't matter as much with other graph types). The graph by race is paneled by rows. Note how this makes it easy to judge the difference in center or spread.
 
-![Histogram with Rows equal to Race Groups](img/HistByRace.png)
+![Histogram of number correct with rows corresponding to Academic Level](img/CorrextByAcadem.png)
+
 
 The histogram by columns is harder to read, even though there are fewer groups.
 
-![Histogram with Columns equal to Gender](img/HistByGenderCols.png)
+![Histogram with Columns equal to Gender](img/CorrextByGender.png)
 
 # Looking at Subsets of Data
 
@@ -309,6 +339,9 @@ Looking at the count in the descriptions of a key variable can help check that i
 **Don't forget to reselect all cases when you are done!**
 
 ![Select all case](SelectCasesBlank.png)
+
+
+
 
 # Chosing Graphics
 
@@ -376,16 +409,16 @@ The variables in the lab can be grouped into several categories:
 
 *Results: Data Description*. Give some basic descriptive statistics for each variable.
 
-```         
+
 -   For nominal and ordinal variables, give the number of students in each category, as well as the number of missing values. Use the [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [F]{.underline}requencies ...* command for this.
 -   For scale variables, provide the minimum, maximum, median, mean and standard deviation. Also, note how many missing values there are. Use the [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [D]{.underline}escriptives ...* command for this.
 -   You might want to put together a table for the scale variables (this is likely harder to do for the nominal and ordinal variables as they have different numbers of categories).
 -   You don't need to mention whether each variable is ordinal, interval or scale, but obviously, you need to know so you can treat it in the right way.
-```
+
 
 1)  Describe how the sample is broken down by "Year". Also, look at the relationship between "Year" and "group". You will want to use a graph or table to support your results.
 
-2)  Describe the distribution of Age in the sample. You should include measures of center and scale and a description of skewness and kurtosis. Include a figure which shows the distribution.
+2)  Describe the distribution of Age in the sample. You should include measures of center and scale and a description of skewness and kurtosis. (See 6 below) Include a figure which shows the distribution.
 
 3)  Describe the distribution of the anxiety and panic measures. Again, include center, scale, skewness, kurtosis and a figure to support the latter.
 
