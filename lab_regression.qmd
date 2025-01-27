@@ -71,27 +71,39 @@ Select *simple scatterplot* from the first window that appears. Place `GADD` in 
 
 ![Scatterplot Options](img/L3_scatter_options.png){#fig-L3_scatter_options}
 
-![Scatterplot in Output](img/L3_scatterplot.png){#fig-L3_scatterplot}
+![Scatterplot in Output](img/Scatterplot.png){#fig-Scatterplot}
+
+Why are the data are 7 lines?  That is because there is only 7 possible values for General anxiety.  So this is not an important detail, but our eyes are drawn to it.  A trick called [jittering](jittering.qmd) adds some random noise to the plot so our eyes are not attracted to the unimportant linear patterns.
+
 
 ### Linearity
 
 We want to check to see if the relationship is linear curved or linear. To do this, double click on the plot to open the Chart Editor. Now we can click on the line icon ![](img/L3_chart_editor_line_icon.png){width="5%"}, this will add a regression line.
 
-![Scatterplot with regression line added](img/L3_regression_line.png){#fig-L3_regression_ling}
+![Scatterplot with regression line added](img/AddingRegressionLine.png){#fig-AddingRegressionLine}
+
+The linear option (1) is the default.  SPSS puts the equation on the graph, but it frequently hides the data.  I like to take it off (uncheck the box and hit apply).
 
 **Do the data look roughly linear?**
 
+Sometimes departures from normality are hard to see.  The `loess` (locally estimated function draws a curve on the graph by looking at local (in a small window around $x$) parts of the graph.  It can help you spot curves that are difficult to see, it can also track some wiggles that are caused by just a few data points, so be careful.  To add a loess line, click on the add line icon and this time select loess (2).
+
+<!-- Need a picture with the lowess line. -->
+
+
 Remember, the linear regression will only pick up the linear part of the relationship, not the curve. It's up to you to ensure that your data is appropriate for the test you're trying to run. More accurately, however, as a researcher you would want to *select* the model that is most appropriate for your data. But that's difficult when you're learning about your first models.
 
-<!-- We need to add an aside or extra page  -->
+::: .callout-warning
+This is something that often confuses students.  If there is little to no correlation (the scatterplot looks like a big, often circular, blob), both correlation analysis and regression analysis will fail gracefully.  They will tell you that the correlation/slope is near zero, which is an accurate description of the data.
 
-<!-- Not sure what the topic of the aside should be? -->
+The problem comes in when there is a distinct *non-linear* (curve or change in slope) pattern.  Then the regression and correlation analysis are only telling part of the story (the linear part), and a more complex model than simple linear regression is needed.
+:::
 
 ### Outliers
 
 We also want to check for the presence of outliers in our data. To identify outliers in SPSS click the *Data Label Mode* icon ![](img/L3_data_label_icon.png){width="5%"} in the SPSS Plot Editor to turn your cursor into an identification tool.
 
-![Scatterplot with labeled points](img/L3_scatter_labels.png){#fig-L3_scatterplot_labels}
+![Scatterplot with labeled points](img/EditingVariableLabel.png){#fig-scatterplot_labels}
 
 You can click on any data point to make its case number appear and disappear. Use this procedure to look for outliers. We are looking for two kinds of points. First, we are looking for points in the extreme range (high or low) of the *x*-axis which might be highly influential. Second, we are looking for points that are not generally associated with the point cloud.
 
@@ -128,7 +140,7 @@ Now look at the plot. **Do all of the groups follow the same general pattern, or
 
 Even with using shapes it is difficult to see any clear patterns in the main cluster, which can be a good trait depending on your purpose! **How about the outliers? Is there a certain group that seems to tend towards a particular area?**
 
-When we're checking for confounding variables, we're wanting to make sure there is not another varaible (e.g., year in school) that explains a pattern we may or may not see in the scatterplot. Let's look at one more example by checking whether there is a clear pattern between male and female respondents.
+When we're checking for confounding variables, we're wanting to make sure there is not another variable (e.g., year in school) that explains a pattern we may or may not see in the scatterplot. Let's look at one more example by checking whether there is a clear pattern between male and female respondents.
 
 ![Scatterplot with shapes for male and female](img/L3_scatter_male_female.png){#fig-scatter_male_female}
 
