@@ -9,7 +9,6 @@ library(tidyverse)
 library(kableExtra)
 ```
 
-
 # A Recap of Part 1
 
 Part 1 talked about how to load the data into SPSS and clean it.
@@ -40,7 +39,7 @@ The `mean` is the efficient choice, that means that if the data are approximatel
 
 The `median` is more robust to departures from normality and more resistant to outliers, but if the data are approximately normally distributed, the standard error of the median is generally bigger than the standard error of the mean.
 
-The `minimum` and `maximum`, although very useful for data cleaning, are not really useful for describing the location of the data. If there is one or more outliers, chances are it will be the minimum, the maximum or both.  Thus, these are not particularly measure of location, but they are useful for checking for outliers.
+The `minimum` and `maximum`, although very useful for data cleaning, are not really useful for describing the location of the data. If there is one or more outliers, chances are it will be the minimum, the maximum or both. Thus, these are not particularly measure of location, but they are useful for checking for outliers.
 
 The `mode` is also not a particularly good measure of center. Technically, if all of the values are unique, then they are all modes, so we haven't reduced the data at all. If there are multiple modes, SPSS just reports the lowest (with a footnote), so real analysts seldom bother with it.
 
@@ -75,12 +74,13 @@ This section will look at generating tables of statistics; there are two command
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
-[A]{.underline}nalyze > D[e]{.underline}scriptive Statistics > [D]{.underline}escriptive...` 
+
+[A]{.underline}nalyze \> D[e]{.underline}scriptive Statistics \> [D]{.underline}escriptive...\`
 :::
 
-The descriptives command brings up the dialog below.  
+The descriptives command brings up the dialog below.
 
-![Descriptives Diaglog](img/Descriptives1.png) 
+![Descriptives Diaglog](img/Descriptives1.png)
 
 Select on the variables in the left hand column and then press the arrow to move them to the right hand side (the variables to be used). By default it shows the labels for the variables (with the names in square brackets), but you can right click on one of the variable names to switch the view to names (or back to labels if it is showing names). Click on the Options button to select statistics; which opens a selection dialog.
 
@@ -90,7 +90,8 @@ Select on the variables in the left hand column and then press the arrow to move
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
-[A]{.underline}nalyze > D[e]{.underline}scriptive Statistics > [F]{.underline}requencies...` 
+
+[A]{.underline}nalyze \> D[e]{.underline}scriptive Statistics \> [F]{.underline}requencies...\`
 :::
 
 The command `Analyze > Descriptive Statistics > Frequencies... [Alt+A E F]` also produces statistics (although some statistics, like mean, only make sense if the variable is a scale variable, the mean of a nominal variable is undefined). This opens a variable selection diaglog.
@@ -136,12 +137,13 @@ Most of the commands for building graphs are located in the `Graph > Legacy` men
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
-[G]{.underline}raphs > [L]{.underline}egacy Dialogs > H[i]{.underline}stogram...
+
+[G]{.underline}raphs \> [L]{.underline}egacy Dialogs \> H[i]{.underline}stogram...
 :::
 
-![Histogram Dialog](img/Histogram.png)
+![Histogram Dialog](img/Histogram1.png)
 
-![Histogram Editor](img/HistogramEditor.png)
+![Histogram Editor](img/HistogramEditor1.png)
 
 In the graph editor you can edit X and Y axis labels and play with the appearance of the graph.
 
@@ -154,18 +156,15 @@ In the graph editor you can edit X and Y axis labels and play with the appearanc
 You either let SPSS calculate the mean and variance, or you can explicitly enter them.
 
 ::: callout-warning
-
-Just because SPSS can put a normal curve on a histogram, it doesn't mean
-that the distribution is normal.  It just means that SPSS can calculate a mean and a standard deviation.  You need to judge how close the normal curve is to the histogram.
-
+Just because SPSS can put a normal curve on a histogram, it doesn't mean that the distribution is normal. It just means that SPSS can calculate a mean and a standard deviation. You need to judge how close the normal curve is to the histogram.
 :::
-
 
 ## Boxplots
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
-[G]{.underline}raphs > [L]{.underline}egacy Dialogs > Bo[x]{.underline}plot...
+
+[G]{.underline}raphs \> [L]{.underline}egacy Dialogs \> Bo[x]{.underline}plot...
 :::
 
 There are two modes in which you can draw boxplots: Each boxplot is a different variable, or each boxplot is a different group of cases. For a whole variable summary, pick variables.
@@ -184,7 +183,8 @@ Be careful that all of the variables need to be on compatible scales. In this ca
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
-[G]{.underline}raphs > [L]{.underline}egacy Dialogs > [B]{.underline}ar...
+
+[G]{.underline}raphs \> [L]{.underline}egacy Dialogs \> [B]{.underline}ar...
 :::
 
 There are a number of ways of doing bar charts. You can select them through the "mode selection dialog" that pops up when you select the bar charts menu option. function. (These mostly matter when you are looking at the relationship between two discrete variables.) Simple bar charts are used to summarize a single variable (often counts of cases), and the clustered and stacked look at two variables (usually at least one of which is categorical variables. By selecting "groups of cases", the barplot will focus on the counts in each category.
@@ -199,35 +199,66 @@ The icon with the numbers above the bars adds counts to the bars. (It works with
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
-[G]{.underline}raphs > [L]{.underline}egacy Dialogs > Pi[e]{.underline}stogram...
+
+[G]{.underline}raphs \> [L]{.underline}egacy Dialogs \> Pi[e]{.underline}stogram...
 :::
 
 -   Angles are harder to judge than lengths, so pie charts are harder to read than bar charts.
-    -   3D pie charts add a visual rotation to the angle judgement, makeing them even worse than 2d pie charts.
+    -   3D pie charts add a visual rotation to the angle judgement, making them even worse than 2d pie charts.
 -   Pie charts give a better sense of part-of-whole than do bar charts.
 
-
 # Breakdown by Category
+
+Often we are interested if the distribution of one variable (the dependent or outcome variable) is different for different groups (the independent or explanatory variable).  In this case we will assume the grouping variable is nominal or ordinal.  There are two cases depending on the outcome variable:
+
+* Nominal or Ordinal -- Use a cross-tabulation (crosstab) -- a table of counts of individuals in each pair of categories.
+
+* Scale -- Use `compare means` to get a breakdown of statistics by group.
+
+
+## Cross-tabs
+
+::: {.callout-note appearance="simple"}
+### SPSS Command
+
+[A]{.underline}nalyze \> D[e]{.underline}escriptive Statistics \> [C]{.underline}rosstabs...
+:::
+
+The crosstab compares the distribution of two categorical variables.
+
+![Crosstab Variable Selection](img/CrosstabScreen.png)
+
+Pick one variable for rows (1) and one for columns (2).  The layout may look better one way or the other, so try both ways.
+
+Next, open the Statistics (3) dialog with the button on the left.  This is where you can calculate the chi-square statistic (Unit 19), also some other statistics, like "Lambda" which is used for rater agreement.  We don't need this now, so just leave it blank for now.
+
+![Crosstab Statistics](img/Crosstab-stats.png)
+
+Next, open the Cells dialog (4).  Here you can select whether you want row percentages, column percentages, or total percentages.  (Don't select more than one, as the table is then too confusing.) I recommend using the APA style (which gives row percentages as well as using APA styling for the table).
+
+![Cells Dialog](img/CrossTabLayout.png)
+
+Here is the output for [Academic Level by Study Condition](img/Crosstab.pdf) and here with the reversed axis [Study Condition by Academic Level](img/Crosstab.pdf).  Neither of these two options are good, in particular, SPSS is splitting the table across pages.  So the solution is to pull the table into a work processor and process it manually.
+
+The reason we are looking at this statistic is to check that the distribution of academic levels is approximately the same across all study conditions.  Here not that there there are only 3 honor students in the control condition, while there are more the other conditions.  (That might be bad luck, but it also might be an explanation for why the control students don't perform as well.)
+
+::: {.callout-note}
+We don't expect the proportions to be exactly the name (unless we have used the variable when allocating subjects to treatments).  So how close is "approximately the same".  The chi-square ($\chi^2$) statistic is a measure of the difference between the observed cell counts and the expected (when the two variables are statistically independent) counts.  Unit 19 covers this test.
+:::
 
 ## Compare Means
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
-[A]{.underline}nalyze > Compare [M]{.underline}eans > [M]{.underline}eans...
+
+[A]{.underline}nalyze \> Compare [M]{.underline}eans \> [M]{.underline}eans...
 :::
 
-The former is good for breaking a scale variable down by a nominal or ordinal one. The latter for breaking down a nominal or ordinal variable by the another nominal or ordinal variable.
+For looking at the differences in center and spread in a scale variable by groups defined by a nominal or ordinal variable, use Compare Means.
 
 ![Compare Means Dialog](img/CompareMeans.png)
 
-::: {.callout-note appearance="simple"}
-### SPSS Command
-[A]{.underline}nalyze > D[e]{.underline}escriptive Statistics > [C]{.underline}rosstabs...
-:::
-
-## Cross-tabs
-
-For the crosstabs, try both rows and columns, which one tells the story better. Also, don't select more than one of "Row percentages", "Column percentages", or "Total percentages", the table just gets too confusing.
+Don't forget to adjust the number of digits from the output.
 
 ## Pivoting Tables
 
@@ -240,9 +271,11 @@ Pivoting the table can fix this. (This can be done in SPSS, or in a spreadsheet 
 ![Pivot table trays](img/PivotingTrays.png)
 
 ## Boxplots by group
+
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
-[G]{.underline}raphs > [L]{.underline}egacy Dialogs > Bo[x]{.underline}plot...
+
+[G]{.underline}raphs \> [L]{.underline}egacy Dialogs \> Bo[x]{.underline}plot...
 :::
 
 Now select the other mode in the boxplot:
@@ -257,7 +290,8 @@ There is a new field "Category Axis" in the dialog, this is where the grouping v
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
-[G]{.underline}raphs > [L]{.underline}egacy Dialogs > [B]{.underline}ar...
+
+[G]{.underline}raphs \> [L]{.underline}egacy Dialogs \> [B]{.underline}ar...
 :::
 
 Bar charts are similar. When you have two categorical variables, sometimes swapping which one is the main variable and which defines the clusters will make a better plot. Try it both ways to see.
@@ -266,7 +300,8 @@ Bar charts are similar. When you have two categorical variables, sometimes swapp
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
-[G]{.underline}raphs > [L]{.underline}egacy Dialogs > H[i]{.underline}stogram...
+
+[G]{.underline}raphs \> [L]{.underline}egacy Dialogs \> H[i]{.underline}stogram...
 :::
 
 Adding a grouping variable to the "Panel by Rows" field in the histogram dialog will produce multiple histograms that share an axis:
@@ -275,11 +310,12 @@ Adding a grouping variable to the "Panel by Rows" field in the histogram dialog 
 
 For histograms paneling by rows in much better than paneling by columns because it lines up the X-axis (it doesn't matter as much with other graph types). The graph by race is paneled by rows. Note how this makes it easy to judge the difference in center or spread.
 
-![Histogram with Rows equal to Race Groups](img/HistByRace.png)
+![Histogram of number correct with rows corresponding to Academic Level](img/CorrextByAcadem.png)
+
 
 The histogram by columns is harder to read, even though there are fewer groups.
 
-![Histogram with Columns equal to Gender](img/HistByGenderCols.png)
+![Histogram with Columns equal to Gender](img/CorrextByGender.png)
 
 # Looking at Subsets of Data
 
@@ -303,6 +339,9 @@ Looking at the count in the descriptions of a key variable can help check that i
 **Don't forget to reselect all cases when you are done!**
 
 ![Select all case](SelectCasesBlank.png)
+
+
+
 
 # Chosing Graphics
 
@@ -358,37 +397,36 @@ The variables in the lab can be grouped into several categories:
 
 -   *Background Variables*: Gender, Year, Age, Ethnicity
 
-
 -   *Anxiety Measures*: GADD, genaxa
 
 -   *Panic Measures*: PAG, paa
 
 -   *ADHD Measures*: inatt, hyper
 
-  - Create a new variable `ADHDtotal` by adding `inatt` and `hyper`.
-  
-  -   Note carefully that the sample size for the ADHD measure is much smaller than for the background variables. Why this discrepancy and who is missing?
+-   Create a new variable `ADHDtotal` by adding `inatt` and `hyper`.
+
+-   Note carefully that the sample size for the ADHD measure is much smaller than for the background variables. Why this discrepancy and who is missing?
 
 *Results: Data Description*. Give some basic descriptive statistics for each variable.
 
-    -   For nominal and ordinal variables, give the number of students in each category, as well as the number of missing values. Use the [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [F]{.underline}requencies ...* command for this.
-    -   For scale variables, provide the minimum, maximum, median, mean and standard deviation. Also, note how many missing values there are. Use the [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [D]{.underline}escriptives ...* command for this.
-    -   You might want to put together a table for the scale variables (this is likely harder to do for the nominal and ordinal variables as they have different numbers of categories).
-    -   You don't need to mention whether each variable is ordinal, interval or scale, but obviously, you need to know so you can treat it in the right way.
 
+-   For nominal and ordinal variables, give the number of students in each category, as well as the number of missing values. Use the [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [F]{.underline}requencies ...* command for this.
+-   For scale variables, provide the minimum, maximum, median, mean and standard deviation. Also, note how many missing values there are. Use the [*A*]{.underline}*nalyze \> D[e]{.underline}scriptive Statistics \> [D]{.underline}escriptives ...* command for this.
+-   You might want to put together a table for the scale variables (this is likely harder to do for the nominal and ordinal variables as they have different numbers of categories).
+-   You don't need to mention whether each variable is ordinal, interval or scale, but obviously, you need to know so you can treat it in the right way.
 
 
 1)  Describe how the sample is broken down by "Year". Also, look at the relationship between "Year" and "group". You will want to use a graph or table to support your results.
 
-2)  Describe the distribution of Age in the sample. You should include measures of center and scale and a description of skewness and kurtosis. Include a figure which shows the distribution.
+2)  Describe the distribution of Age in the sample. You should include measures of center and scale and a description of skewness and kurtosis. (See 6 below) Include a figure which shows the distribution.
 
-4)  Describe the distribution of the anxiety and panic measures. Again, include center, scale, skewness, kurtosis and a figure to support the latter.
+3)  Describe the distribution of the anxiety and panic measures. Again, include center, scale, skewness, kurtosis and a figure to support the latter.
 
-5)  Describe the distribution of the inatt, hyper, and total ADHD symptoms measures (you will need to compute this). Again, include center, scale, skewness, kurtosis and a figure to support the latter.
+4)  Describe the distribution of the inatt, hyper, and total ADHD symptoms measures (you will need to compute this). Again, include center, scale, skewness, kurtosis and a figure to support the latter.
 
-6)  Pick on of the anxiety or panic measures and describe how it differs across year in school (Freshman, Junior, &c.).  Include a table or graph to support this.
+5)  Pick on of the anxiety or panic measures and describe how it differs across year in school (Freshman, Junior, &c.). Include a table or graph to support this.
 
-7) Create a cross-tab of Year by ADHD control.  Are there any obvious difference between the groups?
+6)  Create a cross-tab of Year by ADHD control. Are there any obvious difference between the groups?
 
 You can append this information to the Part 1 draft: this is the first subsection in the "Results" section.
 

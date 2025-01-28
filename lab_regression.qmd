@@ -7,8 +7,6 @@ library(tidyverse)
 library(kableExtra)
 ```
 
-
-
 # Lab Four: Regression
 
 At the end of this lab you should be able to perform a simple linear regression, including diagnostics and making predictions. The question we're exploring in this lab is:
@@ -45,6 +43,7 @@ This data set has lots of missing data. Some of the data are missing at random, 
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
+
 [A]{.underline}nalyze \> Compare [M]{.underline}eans \> [M]{.underline}eans ...
 :::
 
@@ -64,6 +63,7 @@ We have already done much of the univariate exploratory analysis of the data in 
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
+
 [G]{.underline}raphs \> [L]{.underline}egacy Dialogs \> [S]{.underline}catter/Dot...
 :::
 
@@ -140,6 +140,7 @@ It does not appear we have to worry too much about confounding variables---based
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
+
 [A]{.underline}nalyze \> [C]{.underline}orrelate \> [B]{.underline}ivariate...
 :::
 
@@ -159,6 +160,7 @@ Linear regression in SPSS is done through the menu item
 
 ::: {.callout-note appearance="simple"}
 ### SPSS Command
+
 [A]{.underline}nalyze \> [R]{.underline}egression \> [L]{.underline}inear...
 :::
 
