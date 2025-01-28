@@ -14,7 +14,7 @@ library(kableExtra)
 
 Part 1 talked about how to load the data into SPSS and clean it.
 
-You will use the [ADHD data set](data-library.qmd), which is the same one you used for Part 1.
+You will use the [ADHD data set](data_library.qmd), which is the same one you used for Part 1.
 
 For these examples, I the ACED data set which is already loaded and cleaned here [ACED Data](data/ACED-Subset.sav).
 

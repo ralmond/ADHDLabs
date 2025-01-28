@@ -4,9 +4,24 @@ title: "EDF 5400 ADHD Labs:  Data Repository"
 
 # Datasets
 
-Hello world. Why is this not showing correctly
+
 
 ## ALEC Data
-[Data (CSV)]('data/ACED-Subset.csv')
 
-[Codebook]('data/Alec-Subset-Codebook.pdf')
+This is the ADHD data gathered by @prevatt15
+
+
+* [Data (CSV)]('data/ACED-Subset.csv')
+
+* [Codebook]('data/Alec-Subset-Codebook.pdf')
+
+If you get really stuck on the data cleaning, you can email the instructor for an SPSS save file.
+
+## ACED Data
+
+I previously used a data set ACED [@fathog], which is still used in some examples.
+
+* [ACED (CSV)](data/ACED-Subset.csv)
+
+* [ACED (SAV; SPSS format)](data/ACED-Subset.sav)
+

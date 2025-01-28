@@ -6,3 +6,4 @@ _quarto.yml~
 *~
 _site
 /.quarto/
+.DS_Store

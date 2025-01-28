@@ -35,7 +35,7 @@ Answering this question relies on two variables present in the question. The fir
 
 ## Data
 
-We'll use the same [ADHD data](data-library.qmd) we used in the first lab. Refer to the first lab handout for instructions on reading the data set in. If you saved your data as an SPSS `.sav` file after the first lab, you can use that instead of reading it in again. If you didn't save your `.sav` file from lab one, then you'll need to download the raw form and clean it again.
+We'll use the same [ADHD data](data_library.qmd) we used in the first lab. Refer to the first lab handout for instructions on reading the data set in. If you saved your data as an SPSS `.sav` file after the first lab, you can use that instead of reading it in again. If you didn't save your `.sav` file from lab one, then you'll need to download the raw form and clean it again.
 
 Don't forget that you need to:
 
