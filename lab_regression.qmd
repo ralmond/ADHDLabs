@@ -124,15 +124,30 @@ The *Year in School* (`YEAR`) variable is in the *Group* row. Under the grouping
 
 Now look at the plot. **Do all of the groups follow the same general pattern, or are the groups visibly separate?**
 
-![Scatterplot with shapes](img/L3_scatter_shapes.png){#fig-scatter_shapes}
+![Scatterplot with shapes](img/ByYearBW.png){#fig-scatter_shapes}
 
 Even with using shapes it is difficult to see any clear patterns in the main cluster, which can be a good trait depending on your purpose! **How about the outliers? Is there a certain group that seems to tend towards a particular area?**
 
 When we're checking for confounding variables, we're wanting to make sure there is not another varaible (e.g., year in school) that explains a pattern we may or may not see in the scatterplot. Let's look at one more example by checking whether there is a clear pattern between male and female respondents.
 
-![Scatterplot with shapes for male and female](img/L3_scatter_male_female.png){#fig-scatter_male_female}
+![Scatterplot with shapes for male and female](img/ByGenderBW.png){#fig-scatter_male_female}
 
 This does show a few points at both the upper and lower end of the x-axis are more male, but those are just a few outliers and not a true clear clustering of two groups.
+
+To force SPSS to use shapes instead of colors for markers, you can set an option.
+
+::: {.callout-note appearance="simple"}
+### SPSS Command
+
+[E]{.underline}dit \> Optio[n]{.underline}s...
+:::
+
+This will pop up a window to edit options, select the "Chart" tab and then "APA" or "Academic" style tables from the list.
+
+![Table Chart Tab](img/APA-Charts.png)
+
+This will mean that the default style for tables is now APA style.
+
 
 ## Correlations
 

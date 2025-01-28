@@ -371,6 +371,26 @@ Each figure and table should have a clear caption that tells the reader what is 
 
 Figures and tables are numbered separately, usually with consecutive integers. (Books will sometimes use number of the form *chapter.figure*, but papers usually use a single number.) Generally figure numbers start with `Figure` or `Fig.` and table numbers with `Table` or `Tab.` The `F` or `T` is capitalized when "figure" or "table" is followed by a number, and it become a proper noun (i.e., it does not take an article like "the" or "a"). If referring to it in the text, it is better to put a non-breaking space between the word and the number, so this does not split across lines. The easiest way to reference a figure or table is to just put `(Figure xxx)` or `(Table yyy)` after the sentence where it is referenced. The word "see" is implied and is usually omitted to save space.
 
+## APA Style tables
+
+The old default table look for SPSS was remarkably ugly.  In particular, it had heavy lines between the rows and columns of the table which are visually distracting.  The current version is substantially better, the lines are a softer gray, but they are still there.  SPSS usually has more significant digits than are necessary.
+
+There are three solutions:  (1) Go into the table editor, select APA or Academic style, (2) Set the SPSS Options to use APA style by default, or (3) Copy the data from SPSS to a word processor (e.g., MS Word) or spreadsheet (e.g., Excel) and do the formatting there.
+
+::: {.callout-note appearance="simple"}
+### SPSS Command
+
+[E]{.underline}dit \> Optio[n]{.underline}s...
+:::
+
+This will pop up a window to edit options, select the "Tables" tab and then "APA" or "Academic" style tables from the list.
+
+![Table Options Tab](img/APATables.png)
+
+This will mean that the default style for tables is now APA style.
+
+Note that this does not fix issues with the number of digits or needing to "pivot" the way the rows and columns are aligned.  Sometimes solution (3), copying the data into your word processor and editing it by hand, gives you the best results.
+
 ## Meaningful Labels
 
 To an analyst in the middle of project, the short code names given to variables (e.g., "GADD" or "hyper") are familiar friends. When preparing tables and graphs for exploratory use, it is fine to use these abbreviated names. When it come time to prepare the graph or table for publication, be kind to the reader who is often not a member of the research team. The short SPSS variable names should be replaced with longer, human readable names. If there is additional data (such as units) it is often good to put this there as well. So while "Population" is better than "Pop.", "Population (in thousands)" is better still.
