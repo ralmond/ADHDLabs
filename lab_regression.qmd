@@ -136,7 +136,7 @@ The *Year in School* (`YEAR`) variable is in the *Group* row. Under the grouping
 
 Now look at the plot. **Do all of the groups follow the same general pattern, or are the groups visibly separate?**
 
-![Scatterplot with shapes](img/L3_scatter_shapes.png){#fig-scatter_shapes}
+![Scatterplot with shapes](img/GraphWithGroups.png){#fig-scatter_shapes}
 
 Even with using shapes it is difficult to see any clear patterns in the main cluster, which can be a good trait depending on your purpose! **How about the outliers? Is there a certain group that seems to tend towards a particular area?**
 
