@@ -43,7 +43,7 @@ There are a couple of things you might need to do first.
 
 ![Virtual Lab Menu Button](img/VirtualLabMenu.png)
 
-The upload icon should appear.
+The upload icon should appear.  (If you don't see the upload icon in the Citrix menu bar, try clicking on the button with the three dots, that will show some additional commands.)
 
 ![Virtal Lab Upload Button](img/Upload.png)
 
@@ -277,7 +277,7 @@ Begin writing the paper. Write it as if you were going to submit it to a journal
 
 -   *Research Question*. We will focus on two research questions: (1) exploring the relationship between ADHD symptoms and anxiety and (2) exploring the difference in anxiety levels between students with and without ADHD. Write these out in your own words. (Note, these should be scientific hypotheses, not the statistical *null hypothesis*; don't worry about this if you haven't learned what a null hypothesis is yet).
 
--   *Methods: Data Description*. This is not your own data collection, but you do need to summarize how @pravatt15 gathered the data. From where did they come? What are the inclusion and exclusion criteria? How big is the sample: how many ADHD and control students are there.
+-   *Methods: Data Description*. This is not your own data collection, but you do need to summarize how @prevatt15 gathered the data. From where did they come? What are the inclusion and exclusion criteria? How big is the sample: how many ADHD and control students are there.
 
 -   *Methods: Measures*. For each of the measures in the data dictionary, give a brief description. In particular, if this based on a questionnaire, how many questions are there and how are they scored (yes-no? 4-point scale?)
 

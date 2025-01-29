@@ -148,7 +148,7 @@ The [Effect Size Calculator](https://myweb.fsu.edu/ralmond/IntroStats/EffectSize
 
 ## The Graduate Students
 
-As most of you have probably learned by now, graduate school is somewhat different from undergraduate education. There are 85 graduate students in the data file, but looking at @table_one, they are underrepresented in the control group compared to the ADHD group. Consequently, we might want to remove them from the analysis to see if that makes a difference.
+As most of you have probably learned by now, graduate school is somewhat different from undergraduate education. There are 85 graduate students in the data file, but looking at the cross tab of year by study condition (from Part 2), graduates are underrepresented in the control group compared to the ADHD group. Consequently, we might want to remove them from the analysis to see if that makes a difference.
 
 ::: {.callout-note appearance="simple" collapse="true"}
 Table 1 was created using:
@@ -179,7 +179,7 @@ Year ~= 5
 <!-- Good place for a photo -->
 
 ::: callout-note
-`~=` is the way SPSS expresses *not equals*, and 5 is the numeric code for graduate students (@codebook).
+`~=` is the way SPSS expresses *not equals*, and 5 is the numeric code for graduate students (see the [codebook](data_library.qmd) if this is unclear.).
 :::
 
 Does removing the graduate students make a big difference in any of the conclusions?

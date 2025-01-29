@@ -136,15 +136,30 @@ The *Year in School* (`YEAR`) variable is in the *Group* row. Under the grouping
 
 Now look at the plot. **Do all of the groups follow the same general pattern, or are the groups visibly separate?**
 
-![Scatterplot with shapes](img/GraphWithGroups.png){#fig-scatter_shapes}
+![Scatterplot with shapes](img/ByYearBW.png){#fig-scatter_shapes}
 
 Even with using shapes it is difficult to see any clear patterns in the main cluster, which can be a good trait depending on your purpose! **How about the outliers? Is there a certain group that seems to tend towards a particular area?**
 
 When we're checking for confounding variables, we're wanting to make sure there is not another variable (e.g., year in school) that explains a pattern we may or may not see in the scatterplot. Let's look at one more example by checking whether there is a clear pattern between male and female respondents.
 
-![Scatterplot with shapes for male and female](img/L3_scatter_male_female.png){#fig-scatter_male_female}
+![Scatterplot with shapes for male and female](img/ByGenderBW.png){#fig-scatter_male_female}
 
 This does show a few points at both the upper and lower end of the x-axis are more male, but those are just a few outliers and not a true clear clustering of two groups.
+
+To force SPSS to use shapes instead of colors for markers, you can set an option.
+
+::: {.callout-note appearance="simple"}
+### SPSS Command
+
+[E]{.underline}dit \> Optio[n]{.underline}s...
+:::
+
+This will pop up a window to edit options, select the "Chart" tab and then "APA" or "Academic" style tables from the list.
+
+![Table Chart Tab](img/APA-Charts.png)
+
+This will mean that the default style for tables is now APA style.
+
 
 ## Correlations
 
@@ -162,9 +177,7 @@ It does not appear we have to worry too much about confounding variables---based
 
 <!-- Custom callout-note for reflection questions like the one above -->
 
-Normally, APA style would have us report the *p*-values [^3] and the sample sizes along with the correlations. Don't bother with the *p*-values, as we haven't covered them in class yet, but do report the sample sizes. Are the sample sizes different? If so, why? Is that difference likely to affect the outcome?
-
-[^3]: SPSS reports *p*-values as *Sig. (2-tailed)* in tables. Don't be confused if you do not see "*p*-value" anywhere. That small number---which should always be less than one---is the *p*-value.
+APA style would have us report the *p*-values and the sample sizes along with the correlations. SPSS reports *p*-values as *Sig. (2-tailed)* in tables. Don't be confused if you do not see "*p*-value" anywhere. That small number---which should always be less than one---is the *p*-value.
 
 ## Simple Linear Regression
 

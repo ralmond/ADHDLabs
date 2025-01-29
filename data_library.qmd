@@ -4,18 +4,24 @@ title: "EDF 5400 ADHD Labs:  Data Repository"
 
 # Datasets
 
-Here is the data for the Lab.
+
 
 ## ALEC Data
 
-This is the ADHD data from the Alec Lab [@prevatt15]
+This is the ADHD data gathered by @prevatt15
 
-[Data (CSV)](data/Alec-5400Subset.csv)
 
-[Codebook](data/Alec-5400Subset-Codebook.pdf)
+* [Data (CSV)]('data/ACED-Subset.csv')
 
-## ACED 
+* [Codebook]('data/Alec-Subset-Codebook.pdf')
 
-This is a second data set I use in some examples
+If you get really stuck on the data cleaning, you can email the instructor for an SPSS save file.
 
-[ACED CSV](data/ACED-Subset.csv)
+## ACED Data
+
+I previously used a data set ACED [@fatHog], which is still used in some examples.
+
+* [ACED (CSV)](data/ACED-Subset.csv)
+
+* [ACED (SAV; SPSS format)](data/ACED-Subset.sav)
+
