@@ -43,7 +43,7 @@ filter(rubric,Part %in% paste(1:4)) |>
 
 These apply to all of the parts.
 
-```{r}
+```{r echo=FALSE}
 filter(rubric,Part %in% c("T","G")) |>
   select(all_of(c("Title","General","Specific"))) |>
   kbl() |>

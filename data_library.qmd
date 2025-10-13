@@ -11,9 +11,9 @@ title: "EDF 5400 ADHD Labs:  Data Repository"
 This is the ADHD data gathered by @prevatt15
 
 
-* [Data (CSV)]('data/ACED-Subset.csv')
+* [Data (CSV)](data/Alec-5400Subset.csv)
 
-* [Codebook]('data/Alec-Subset-Codebook.pdf')
+* [Codebook](data/Alec-Subset-Codebook.pdf)
 
 If you get really stuck on the data cleaning, you can email the instructor for an SPSS save file.
 

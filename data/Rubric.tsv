@@ -39,7 +39,7 @@ T	Other text issues.	See "Feedback" tab of https://docs.google.com/spreadsheets/
 0	Figure/Table Style	*******************************************************	*******************************************************	
 G	Figures and Tables referenced in the text	Figures and tables should be numbered, captioned and mentioned in the text.
 G	Presentaiton Graphics	Are the graphs and tables of presentation quality?	Tables should not have heavy lines between entries, preferably APA style.
-G	Axes and Table Labels.	Labels should be full lables, not abbreviated SPSS variable names
+G	Axes and Table Labels.	Labels should be full labels, not abbreviated SPSS variable names
 G	Choice of graphs	Are the appropriately chosen? Are they referenced in the text?	Don't dump SPSS tables into the document without thinking
 G	Choice of statistics	Do they contain appropriate material, or are there extraneous data included? Can they be understood with minimal reference to the text? 
 G	Digits	Are there appropriate numbers of digits for values in the text and the tables.	Most variables in this data set are integer valued, so 
