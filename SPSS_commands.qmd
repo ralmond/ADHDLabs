@@ -2,9 +2,15 @@
 title: "EDF 5400 ADHD Labs:  Summary of SPSS commands used."
 ---
 
+# Accessibility Support from IBM
+
+Complete Instructions for using SPSS with a keyboard navigation and/or a screen reader can be found at:
+
+<https://www.ibm.com/docs/en/spss-statistics/31.0.0?topic=system-accessibility>  (I've had better luck viewing this page on Chromium-based browsers than Firefox.)
+
 # SPSS Command Summary
 
-A cheat sheet for all SPSS commands used in EDF 5400.  
+A cheat sheet for all SPSS commands used in EDF 5400/5454.
 
 Note that under Windows certain letters in menu items are underlined.
 (SPSS follows this convention in the Windows version.)  These can be
