@@ -73,8 +73,7 @@ Select *simple scatterplot* from the first window that appears. Place `GADD` in 
 
 ![Scatterplot in Output](img/Scatterplot.png){#fig-Scatterplot}
 
-Why are the data are 7 lines?  That is because there is only 7 possible values for General anxiety.  So this is not an important detail, but our eyes are drawn to it.  A trick called [jittering](jittering.qmd) adds some random noise to the plot so our eyes are not attracted to the unimportant linear patterns.
-
+Why are the data are 7 lines? That is because there is only 7 possible values for General anxiety. So this is not an important detail, but our eyes are drawn to it. A trick called [jittering](jittering.qmd) adds some random noise to the plot so our eyes are not attracted to the unimportant linear patterns.
 
 ### Linearity
 
@@ -82,21 +81,20 @@ We want to check to see if the relationship is linear curved or linear. To do th
 
 ![Scatterplot with regression line added](img/AddingRegressionLine.png){#fig-AddingRegressionLine}
 
-The linear option (1) is the default.  SPSS puts the equation on the graph, but it frequently hides the data.  I like to take it off (uncheck the box and hit apply).
+The linear option (1) is the default. SPSS puts the equation on the graph, but it frequently hides the data. I like to take it off (uncheck the box and hit apply).
 
 **Do the data look roughly linear?**
 
-Sometimes departures from normality are hard to see.  The `loess` (locally estimated function draws a curve on the graph by looking at local (in a small window around $x$) parts of the graph.  It can help you spot curves that are difficult to see, it can also track some wiggles that are caused by just a few data points, so be careful.  To add a loess line, click on the add line icon and this time select loess (2).
+Sometimes departures from normality are hard to see. The `loess` (locally estimated function draws a curve on the graph by looking at local (in a small window around $x$) parts of the graph. It can help you spot curves that are difficult to see, it can also track some wiggles that are caused by just a few data points, so be careful. To add a loess line, click on the add line icon and this time select loess (2).
 
 <!-- Need a picture with the lowess line. -->
 
-
 Remember, the linear regression will only pick up the linear part of the relationship, not the curve. It's up to you to ensure that your data is appropriate for the test you're trying to run. More accurately, however, as a researcher you would want to *select* the model that is most appropriate for your data. But that's difficult when you're learning about your first models.
 
-::: .callout-warning
-This is something that often confuses students.  If there is little to no correlation (the scatterplot looks like a big, often circular, blob), both correlation analysis and regression analysis will fail gracefully.  They will tell you that the correlation/slope is near zero, which is an accurate description of the data.
+::: callout-warning
+This is something that often confuses students. If there is little to no correlation (the scatterplot looks like a big, often circular, blob), both correlation analysis and regression analysis will fail gracefully. They will tell you that the correlation/slope is near zero, which is an accurate description of the data.
 
-The problem comes in when there is a distinct *non-linear* (curve or change in slope) pattern.  Then the regression and correlation analysis are only telling part of the story (the linear part), and a more complex model than simple linear regression is needed.
+The problem comes in when there is a distinct *non-linear* (curve or change in slope) pattern. Then the regression and correlation analysis are only telling part of the story (the linear part), and a more complex model than simple linear regression is needed.
 :::
 
 ### Outliers
@@ -120,7 +118,7 @@ In general there are three things to look for in a scatterplot are:
 
 Finally, we want to check to see if the year in school (`YEAR`) makes any difference with the relationship we're interested in exploring. Unless you're working with a literal vaccum, as this is espeically true for social sciences, there are always going to be other variables that influence the relationship you intend to study. We call these extraneous influences *confounding variables*. It's important to check for potential confounders. You do not always have data to check every potential confounding variable, but when we design a study we always try and include important variables that may influence our results (e.g., age, gender, location, etc.).
 
-To check whether one of these variables might be influencing on the reltionship we're studying, we want to use different symbols or colors to represent group membership (i.e., year) in our scatterplot [^2]. Generate another scatterplot exactly as you did in @fig-L3_scatter_options, but this time add `YEAR` to the "Set Markers by" box in the scatterplot dialogue. This will produce a plot with different colored points to represent which year the person (i.e., point) is in.
+To check whether one of these variables might be influencing on the relationship we're studying, we want to use different symbols or colors to represent group membership (i.e., year) in our scatterplot [^2]. Generate another scatterplot exactly as you did in @fig-L3_scatter_options, but this time add `YEAR` to the "Set Markers by" box in the scatterplot dialogue. This will produce a plot with different colored points to represent which year the person (i.e., point) is in.
 
 [^2]: While colored points look fine on the screen (for people with full color vision), the distinction between colors disappears when the graph is printed on a black and white printer or for those with colorblindness.
 
@@ -160,7 +158,6 @@ This will pop up a window to edit options, select the "Chart" tab and then "APA"
 
 This will mean that the default style for tables is now APA style.
 
-
 ## Correlations
 
 It does not appear we have to worry too much about confounding variables---based off the data we have---so let's move on to correlations. To calculate the correlations, use:
@@ -189,23 +186,23 @@ Linear regression in SPSS is done through the menu item
 [A]{.underline}nalyze \> [R]{.underline}egression \> [L]{.underline}inear...
 :::
 
-In this dialog you select the dependent variable and one or more predictor (independent) variables[^4]. You can also add case labels and these will be used in the diagnostic plots. Our question asks whether we can predict the anxiety score (`GADD`) using the impulsivity score (`hyper`). Enter `GADD` as the dependent variable (i.e., the predicted) and `hyper` as the independent (i.e., predictor) variable.
+In this dialog you select the dependent variable and one or more predictor (independent) variables[^3]. You can also add case labels and these will be used in the diagnostic plots. Our question asks whether we can predict the anxiety score (`GADD`) using the impulsivity score (`hyper`). Enter `GADD` as the dependent variable (i.e., the predicted) and `hyper` as the independent (i.e., predictor) variable.
 
-[^4]: When we're talking about experimental design, you might hear independent and dependent more often. But when we're doing predictions (i.e., regression), we often call the independent variables our *predictors* and the dependent variable as the predicted variable or the outcome.
+[^3]: When we're talking about experimental design, you might hear independent and dependent more often. But when we're doing predictions (i.e., regression), we often call the independent variables our *predictors* and the dependent variable as the predicted variable or the outcome.
 
 ![Linear regression window](/img/L3_linear_reg_window.png){#fig-linear_reg_window}
 
-The <u>S</u>tatistics... button provides a pop-up dialog in which you can select various statistics about the regression. In particular, you will want confidence intervals[^5] for the coefficients and model fit statistics.
+The <u>S</u>tatistics... button provides a pop-up dialog in which you can select various statistics about the regression. In particular, you will want confidence intervals[^4] for the coefficients and model fit statistics.
 
-[^5]: The confidence intervals can be adjusted, but the standard practice is to use the 95% interval, so leave this as is. But feel free to adjust it and see how the results change with different intervals.
+[^4]: The confidence intervals can be adjusted, but the standard practice is to use the 95% interval, so leave this as is. But feel free to adjust it and see how the results change with different intervals.
 
 ![Statistics reporting for linear regression](/img/L3_reg_stats_window.png){#fig-reg_stats_window}
 
-The Plo<u>t</u>s... button[^6] provides a pop-up dialog in which you can select plots. Checking "Histogram" will get you a histogram of the residuals[^7]. You can add diagnostic plots using this dialog box. Select a variable for the *x*-and *y*-axis and then hit next to get the opportunity to select another plot. The plot that I like best is the residuals versus predicted values. Select \*ZPRED (the standardized predicted values) and move this to the *x*-axis, and select \*ZRESID (the standardized residual values) and move this to the *y*-axis.
+The Plo<u>t</u>s... button[^5] provides a pop-up dialog in which you can select plots. Checking "Histogram" will get you a histogram of the residuals[^6]. You can add diagnostic plots using this dialog box. Select a variable for the *x*-and *y*-axis and then hit next to get the opportunity to select another plot. The plot that I like best is the residuals versus predicted values. Select \*ZPRED (the standardized predicted values) and move this to the *x*-axis, and select \*ZRESID (the standardized residual values) and move this to the *y*-axis.
 
-[^6]: This buttons was called "Diagnostics" in some older versions of SPSS.
+[^5]: This buttons was called "Diagnostics" in some older versions of SPSS.
 
-[^7]: See the handout on residuals for more information. <!-- Need link to residuals handout. Add that handout to the book -->
+[^6]: See the handout on residuals for more information. <!-- Need link to residuals handout. Add that handout to the book -->
 
 <!-- ![Options for outputting plots](/img/){#fig-plots_window} -->
 
