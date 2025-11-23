@@ -11,4 +11,4 @@ title: "5400 Lab Style Guide"
 * An APA document format template (by various 5400 TAs)
 [APA Template](data/APA_Format_template.docx)
 
-
+* Some notes about [Table Style](TableStyle.qmd).

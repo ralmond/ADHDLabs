@@ -121,7 +121,7 @@ Be careful because SPSS tables often contain variables you don't need, or way to
 
 ![Editing Digits in the Table Editor](img/TableEditorDigits.png)
 
-In the table editor (Figure 6, double click on the table to edit), select the cells you want to edit, and press the add or remove digits button to get a reasonable number of digits.
+In the table editor (Figure 6, double click on the table to edit), select the cells you want to edit, and press the add or remove digits button to get a reasonable number of digits.  Here is another guide to [Table Style](TableStyle.qmd).
 
 Tables are generally numbered `Table` *n*, where the numbers are in order of appearance. (Books use numbers of the form *chapter*`.`*table*; but papers, like the one you are writing for class,just use sequential numbers.) The space between `Table` and the number should be a non-breaking space. Give the caption a human readable description of what is in the table. The caption for a table goes above the table.
 
