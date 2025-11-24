@@ -67,7 +67,7 @@ We have already done much of the univariate exploratory analysis of the data in 
 [G]{.underline}raphs \> [L]{.underline}egacy Dialogs \> [S]{.underline}catter/Dot...
 :::
 
-Select *simple scatterplot* from the first window that appears. Place `GADD` in the x-axis and `hyper` in the y-axis as shown in @fig-L3_scatter_options and click *OK* to generate your plot.
+Select *simple scatterplot* from the first window that appears. Place `GADD` in the y-axis and `hyper` in the x-axis as shown in @fig-L3_scatter_options and click *OK* to generate your plot.
 
 ![Scatterplot Options](img/L3_scatter_options.png){#fig-L3_scatter_options}
 
